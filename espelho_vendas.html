@@ -527,7 +527,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 12:59</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 13:01</strong></div>
 </header>
 
 <section class="resumo">
@@ -7052,7 +7052,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 </style>
 
 <div class="sim-acoes">
-  <button type="button" class="sim-btn sec" onclick="simLimpar()">Limpar proposta</button>
+  <button type="button" class="sim-btn sec" onclick="simLimpar()">Limpar simulação</button>
   <button type="button" class="sim-btn" onclick="window.print()">🖨 Imprimir simulação</button>
 </div>
 
@@ -7287,7 +7287,16 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
     simCalc();
   };
 
+  // Limpa a simulação inteira: unidade, fração, dados do cliente, datas e proposta
   window.simLimpar = function() {
+    var folha = document.getElementById('sim-folha');
+    folha.querySelectorAll('.sim-topo input:not([type=hidden]), .sim-topo select').forEach(function(el) {
+      if (el.tagName === 'SELECT') el.selectedIndex = 0; else el.value = '';
+    });
+    document.getElementById('sim-fracao').innerHTML = '<option value=""></option>';
+    document.getElementById('sim-data-proposta').value = document.getElementById('sim-data-tabela').value;
+    TAB[0].per = 'sinal'; TAB[1].per = 'mensal'; TAB[2].per = 'anual';
+    montarTabela();
     iniciarProposta(); montarProposta(); simCalc();
   };
 
