@@ -501,7 +501,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 10:59</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 11:12</strong></div>
 </header>
 
 <section class="resumo">
@@ -5949,10 +5949,15 @@ var PLANTAS = {"7": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAkG
   var chips = document.querySelectorAll('.chip');
   var ativos = new Set();
 
+  // Ignora hífen, espaço, ponto etc. para que "C-353", "c 353" e "C353" achem a mesma UH
+  function normalizar(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
   function aplicarFiltro() {
-    var termo = busca.value.trim().toLowerCase();
+    var termo = normalizar(busca.value);
     document.querySelectorAll('tr.linha-uh').forEach(function(tr) {
-      var uhOk = !termo || tr.dataset.uh.indexOf(termo) !== -1;
+      var uhOk = !termo || normalizar(tr.dataset.uh).indexOf(termo) !== -1;
       var statusOk = ativos.size === 0 || ativos.has(tr.dataset.status);
       tr.classList.toggle('linha-oculta', !(uhOk && statusOk));
     });
