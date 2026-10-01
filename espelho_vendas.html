@@ -516,7 +516,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 12:33</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 12:34</strong></div>
 </header>
 
 <section class="resumo">
@@ -5533,6 +5533,10 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
   function brl(v) { return isFinite(v) ? 'R$ ' + n2(v) : '—'; }
   function pct(v) { return isFinite(v) ? (v * 100).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '%' : '—'; }
   function dbr(s) { if (!s) return ''; var p = s.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  var FORMAS = ['', 'Pix', 'Cartão', 'Ted', 'Boleto'];   // lista da célula "Forma Pgto" da planilha
+  function opcoesForma(sel) {
+    return FORMAS.map(function(f) { return '<option' + (f === sel ? ' selected' : '') + '>' + f + '</option>'; }).join('');
+  }
   function opcoesPer(sel) {
     return PERIODOS.map(function(p) { return '<option' + (p === sel ? ' selected' : '') + '>' + p + '</option>'; }).join('');
   }
@@ -5561,7 +5565,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
     var corpo = document.getElementById('sim-prop-corpo');
     corpo.innerHTML = PROP.map(function(p, i) {
       return '<tr>' +
-        '<td class="c-forma"><input data-i="' + i + '" data-f="forma" value="' + p.forma + '"></td>' +
+        '<td class="c-forma"><select data-i="' + i + '" data-f="forma">' + opcoesForma(p.forma) + '</select></td>' +
         '<td class="c-parc am"><input type="number" min="0" step="1" data-i="' + i + '" data-f="parc" value="' + p.parc + '"></td>' +
         '<td class="c-per am"><select data-i="' + i + '" data-f="per">' + opcoesPer(p.per) + '</select></td>' +
         '<td class="c-data am"><input type="date" required data-i="' + i + '" data-f="data" value="' + p.data + '"></td>' +
