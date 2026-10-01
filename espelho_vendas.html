@@ -127,6 +127,8 @@ section.resumo {
   margin-bottom: 1.75rem;
   box-shadow: var(--shadow);
 }
+section.resumo-fracoes { margin-top: -0.75rem; }
+section.resumo-fracoes .tile .num { font-size: 1.5rem; }
 .tile {
   background: var(--surface);
   padding: 1.1rem 1.3rem;
@@ -528,7 +530,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 13:23</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 13:28</strong></div>
 </header>
 
 <section class="resumo">
@@ -537,6 +539,12 @@ footer {
   <div class="tile p"><span class="num">74</span><span class="lbl">Parcial</span></div>
   <div class="tile v"><span class="num">79</span><span class="lbl">Vendido</span></div>
   <div class="tile b"><span class="num">174</span><span class="lbl">Bloqueado</span></div>
+</section>
+<section class="resumo resumo-fracoes">
+  <div class="tile total"><span class="num">3.106</span><span class="lbl">Frações totais</span></div>
+  <div class="tile d"><span class="num">596</span><span class="lbl">Frações disponíveis</span></div>
+  <div class="tile v"><span class="num">835</span><span class="lbl">Frações vendidas</span></div>
+  <div class="tile b"><span class="num">1.675</span><span class="lbl">Frações bloqueadas</span></div>
 </section>
 <div class="aviso-tabela">⚠ 1 divergência de preço entre a Tabela e o sistema · sistema sem o INCC de set/2026 em 526 frações — <a href="#divergencias" onclick="mudarAba('resumo')">ver detalhes</a></div>
 
