@@ -77,7 +77,7 @@ body {
 }
 .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
 
-.page { max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.page { max-width: 1560px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
 
 header.topo {
   display: flex;
@@ -312,7 +312,7 @@ details[open] .chevron { transform: rotate(45deg); }
 table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 thead th {
   text-align: left;
-  padding: 0.6rem 0.9rem;
+  padding: 0.55rem 0.55rem;
   background: var(--surface-2);
   color: var(--text-muted);
   font-weight: 600;
@@ -324,18 +324,18 @@ thead th {
   top: 0;
 }
 tbody td {
-  padding: 0.55rem 0.9rem;
+  padding: 0.5rem 0.55rem;
   border-top: 1px solid var(--border);
   white-space: nowrap;
   vertical-align: middle;
 }
-.col-obs { white-space: normal; color: var(--text-muted); font-size: 0.8rem; min-width: 14rem; }
-.col-planta { white-space: normal; min-width: 15rem; font-size: 0.8rem; }
+.col-obs { white-space: normal; color: var(--text-muted); font-size: 0.8rem; min-width: 10rem; }
+.col-planta { white-space: normal; min-width: 12rem; font-size: 0.8rem; }
 .col-planta .planta-extra { display: block; color: var(--text-muted); font-size: 0.74rem; margin-top: 0.1rem; }
 .col-area { white-space: nowrap; }
 thead tr.linha-filtros th { padding: 0.3rem 0.5rem 0.5rem; background: var(--surface-2); position: static; }
 .f-col {
-  width: 100%; min-width: 5.5rem; font: inherit; font-size: 0.74rem; text-transform: none; letter-spacing: 0;
+  width: 100%; min-width: 4rem; font: inherit; font-size: 0.74rem; text-transform: none; letter-spacing: 0;
   color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 0.25rem 0.35rem;
 }
 .f-col:focus { outline: 2px solid var(--accent); outline-offset: 0; }
@@ -391,7 +391,8 @@ thead tr.linha-filtros th { padding: 0.3rem 0.5rem 0.5rem; background: var(--sur
 }
 .pill-clicavel:hover, .pill-clicavel:focus-visible { filter: brightness(0.94); }
 
-.col-pct { display: flex; align-items: center; gap: 0.5rem; min-width: 7rem; }
+.col-pct { min-width: 6.5rem; }
+.pct-wrap { display: flex; align-items: center; gap: 0.4rem; }
 .barra-pct {
   --pct: 0%;
   display: inline-block;
@@ -527,7 +528,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 13:01</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 13:03</strong></div>
 </header>
 
 <section class="resumo">
@@ -673,7 +674,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BENJAMIN ROMANGNOLI PIVETA ASSUNCAO FILHO; GUSTAVO SOUZA DE FARIA; VITORIO PARTICIPACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">3</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></span></td>
 <td class="mono">R$ 2.324.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 177,8 m²">123 m²</span></td>
@@ -688,7 +689,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 3.951.000</td>
 <td class="mono">R$ 15.804.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 305,4 m²">209 m²</span></td>
@@ -763,7 +764,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 2.814.500</td>
 <td class="mono">R$ 11.258.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 170,4 m²">103 m²</span></td>
@@ -943,7 +944,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 2.814.500</td>
 <td class="mono">R$ 11.258.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 170,4 m²">103 m²</span></td>
@@ -998,7 +999,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALEXANDRE DE ASSIS">Parcial</button></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></span></td>
 <td class="mono">R$ 518.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 97,7 m²">61 m²</span></td>
@@ -1028,7 +1029,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 423.500</td>
 <td class="mono">R$ 4.235.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 96 m²">60 m²</span></td>
@@ -1043,7 +1044,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 448.800</td>
 <td class="mono">R$ 4.488.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 109,2 m²">71 m²</span></td>
@@ -1058,7 +1059,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CERAMICA MORGAN LTDA; RODOLFO PARDO ALBAGLI FILHO; SONIA REGINA SCHENA BERTOL">Parcial</button></td>
 <td class="col-fracoes">2</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></span></td>
 <td class="mono">R$ 1.174.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 105,6 m²">68 m²</span></td>
@@ -1118,7 +1119,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="AAM12 ADMINISTRAÇÃO DE BENS PROPRIOS EIRELI; DANIEL FERREIRA DA SILVA; MARCOS FREDERICO NEVES PESSANHA; RAFAEL VITOLA PITOLI; VANESSA FERNANDES LOPES MILLER">Parcial</button></td>
 <td class="col-fracoes">2, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 531.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 105,6 m²">68 m²</span></td>
@@ -1133,7 +1134,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="FERNANDO SIMIOLI CORREA; GILBERTO ZICA FIALHO; HENRIQUE LOPES FERRAZ AIDAR; KARINA SULTANI; REGIS FERREIRA PACHECO; VERA CRISTINA GUIMARAES GRASSMANN; WILSON VOLPATO">Parcial</button></td>
 <td class="col-fracoes">7, 8</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 539.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 109,2 m²">71 m²</span></td>
@@ -1148,7 +1149,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="B.M.F. GESTAO PATRIMONIAL LTDA; CAIO CESAR DE ARRUDA REGIS; CRISTIANE MARTINS DA COSTA ORTIZ; HERCIO AGRANIONIK; LUCIANA TELES FILOGONIO ABREU; LUIZ GUILHERME POERNER; THALES ROCHA BORDIGNON">Parcial</button></td>
 <td class="col-fracoes">8</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 531.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 105,6 m²">68 m²</span></td>
@@ -1163,7 +1164,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANDREIA CAPELLATO PETT ME; JANSEN MARGARIDO PEREIRA; NEXO IMPORTACAO E EXPORTACAO LTDA; RENATO SCHUCK SARAIVA; ROSA MARIA PEDROSSIAN; VANIA FRACALOSSI">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 539.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 109,2 m²">71 m²</span></td>
@@ -1193,7 +1194,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CASSIO FERNANDO LAGO REIS; ELINTON BOBRIK; MARIA EDUARDA GARBELOTTO DO CANTO; MARTIN ERNY FALLER; NATAN DOS SANTOS BILHAR; ROBERTO JUN TERAHATA">Parcial</button></td>
 <td class="col-fracoes">8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 545.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 109,6 m²">71 m²</span></td>
@@ -1223,7 +1224,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANTONIO IVAIR DE SOUSA BARROS; DIEGO NUNES SIQUEIRA; EDUARDO LUIZ VANIN; EDUARDO RAMOS ZART">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 548.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 110,8 m²">72 m²</span></td>
@@ -1238,7 +1239,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ECD CONTABILIDADE LTDA; ELIZABETH VIERO ARAUJO; FABRICIO FELIPPE DA SILVA COSTA; LUCEA INVESTIMENTOS LTDA">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 529.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 105,6 m²">68 m²</span></td>
@@ -1253,7 +1254,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ACDC ADMINISTRADORA DE BENS E DIREITOS LTDA; EWERTON SILVA FAGUNDES; FABIO JOAO SEGABINAZZI; MARCELO BARDEN; MARCOS ALEXANDRE PASSARELLES DE SOUZA FILHO; MARTIN ERNY FALLER">Parcial</button></td>
 <td class="col-fracoes">8, 9</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 546.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 112,8 m²">74 m²</span></td>
@@ -1268,7 +1269,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CORATO INCORPORADORA E CONSTRUTORA DE IMOVEIS LTDA; FERNANDO LUIZ BEMFICA; ODERCIA VENANCIO DA SILVA; RICHARD BORBA MAGALHAES; RODRIGO PAEZ JUNQUEIRA">Parcial</button></td>
 <td class="col-fracoes">3, 4, 5</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 540.500</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 105,6 m²">68 m²</span></td>
@@ -1313,7 +1314,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CMLPAR LTDA; FERNANDO MARIOTTO; MARA CRISTINA LAUXEN; MARCIO VELLOSO FONTES; MARISTELA MARIA FIORINI; RAFAEL STEFANON">Parcial</button></td>
 <td class="col-fracoes">10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 554.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 116,4 m²">77 m²</span></td>
@@ -1328,7 +1329,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CARLOS AUGUSTO PERCIVAL DOS SANTOS; LAURA PUPIM ONORIO; MIGLIOLI VENTURES HOLDING ADMINISTRACAO E PARTICIPACOES LTDA; TIAGO LUERSEN">Parcial</button></td>
 <td class="col-fracoes">1, 4, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:60%"></span><span class="pct-num">60%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:60%"></span><span class="pct-num">60%</span></span></td>
 <td class="mono">R$ 529.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 105,6 m²">68 m²</span></td>
@@ -1373,7 +1374,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="DIARIO DE BORDO LTDA; MARCELO MARTINS GENTIL; SAULO ADJUTO LEPESQUEUR">Parcial</button></td>
 <td class="col-fracoes">7, 8, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 554.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 116,4 m²">77 m²</span></td>
@@ -1403,7 +1404,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CALTIM FERTILIZANTES LTDA; CARLOS ALBERTO FERRARI VIEIRA; CARMEN LIGIA B DE ANDRADE F NERY; CONRADO METIDIERI BATISTA; FLORIVAL ANDRIOLLI JUNIOR; KATI MARI SAYURI KOHATSU; LUCIO FLAVIO PRETTO">Parcial</button></td>
 <td class="col-fracoes">4, 6, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 554.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 116,4 m²">77 m²</span></td>
@@ -1418,7 +1419,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANDRE LUIS MARTEL; BRAZILIAN TERRAPLANAGEM, CONSTRUTORA &amp; URBANIZADORA LTDA; LUCIANE WEIRICH SAUTHIER; PAULO GUILHERME TELLES; SIMONE BOING GUIMARAES">Parcial</button></td>
 <td class="col-fracoes">4, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 548.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 108,9 m²">70 m²</span></td>
@@ -1433,7 +1434,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="AUDREY REZECK OPPENHEIMER; GLAUCO MARCONE VIEIRA SOUZA; GRENTESKI SOUSA EMPREENDIMENTOS LTDA; RODOLFO PARDO ALBAGLI FILHO; SCUSSEL EMPREENDIMENTOS IMOBILIARIOS LTDA">Parcial</button></td>
 <td class="col-fracoes">10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 554.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 116,4 m²">77 m²</span></td>
@@ -1448,7 +1449,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="AMANDA LOUCATELLI REIS; IGOR VIEIRA XAVIER; MGF INVESTIMENTOS LTDA; NGL IMOB LTDA">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 575.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120,9 m²">80 m²</span></td>
@@ -1463,7 +1464,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANJOBC NEGOCIOS E PARTICIPACOES LTDA; CQ ADMINISTRACAO E PARTICIPACOES LTDA; DEMERVAL FERREIRA; ENECON ENGENHARIA E PARTICIPACOES LTDA; FABIANO ALVES DE OLIVEIRA; PRIME ULTRAFORM LTDA">Parcial</button></td>
 <td class="col-fracoes">3, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1478,7 +1479,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="FOCOLARE EMPREENDIMENTOS E PARTICIPACOES LTDA; GUILHERME RONCHI; JOAO PAULO CECHIN; LUCIANO RAIZLER; MARISTELA ROHRIG; STUDIO 219 LAJE DE PEDRA ADMINISTRACAO DE IMOVEIS LTDA">Parcial</button></td>
 <td class="col-fracoes">8</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 506.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 91 m²">55 m²</span></td>
@@ -1493,7 +1494,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="DEMERVAL FERREIRA; FABIO CHAGAS DA SILVA; FCX INVESTIMENTOS E PARTICIPACOES LTDA; INVENTAEVENTO - PRODUCAO DE EVENTOS LTDA; JULIA ELIZA RUBIN; LUIZ EDUARDO FERREIRA; MAYNI GARRIDO PEREIRA">Parcial</button></td>
 <td class="col-fracoes">9</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1523,7 +1524,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ADRIANA DE CARLI SONDA; MADSON DA SILVA SOUSA">Parcial</button></td>
 <td class="col-fracoes">2, 3</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 1.059.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 86 m²">52 m²</span></td>
@@ -1553,7 +1554,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="VIVIANE KOCH">Parcial</button></td>
 <td class="col-fracoes">1, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:75%"></span><span class="pct-num">75%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:75%"></span><span class="pct-num">75%</span></span></td>
 <td class="mono">R$ 1.080.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1568,7 +1569,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="JULIO CESAR SANTOS CABRERA">Parcial</button></td>
 <td class="col-fracoes">1, 2</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 1.100.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1583,7 +1584,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ADRIANO MACEDO DA FONSECA; ALESSANDRA DA COSTA KILER CHIQUITO; ANA PAULA CALIL JANICKE; AVANCAR PARTICIPACOES LTDA; EDUARDO MURATORE THADDEU; GUSTAVO CAMARGO SILVERIO">Parcial</button></td>
 <td class="col-fracoes">8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1598,7 +1599,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BRUNA GRILLO MARCELINO FUCHTER; DETRINA HOLDING LTDA; FLAVIA BRIOSCHI; GILBERTO ZICA FIALHO; H R ROLIM ADMINISTRADORA DE BENS LTDA; IVANIA ZANIN MARIN MORO; MARIA CLARA MARTINS SOUZA NOSE">Parcial</button></td>
 <td class="col-fracoes">7, 8</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1613,7 +1614,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANTONIO CARLOS PINTO CELESTINO; BENJAMIN ROMANGNOLI PIVETA ASSUNCAO FILHO; BRUNO FURTADO BENETTI; GABRIEL BORGES ALVES; JOAO PAULO MELO MARTINI; LUCIANO CHEDE; STARX IMPORTACAO E EXPORTACAO LTDA">Parcial</button></td>
 <td class="col-fracoes">9</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 469.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1658,7 +1659,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALVARO DELLA BONA; ANDREA L. FEINE LTDA; IGOR VIEIRA XAVIER; LUIZA KLEINUBING PORTO; PEDRO KLEINUBING PORTO">Parcial</button></td>
 <td class="col-fracoes">6, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1673,7 +1674,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANDRE NERY; AUREO RODRIGO LOCATELLI; BRUNO COSTA BEHRNDT; IGOR LOSS DA SILVA; LUCIANA DUTRA DRAETA; LUIZ ANTONIO RODRIGUES; STEFANO GARCIA SIMONCELLI; VALDIR PASA">Parcial</button></td>
 <td class="col-fracoes">7, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1688,7 +1689,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="AIRTON APARECIDO FERREIRA DE BRITO; DEODORO ANTONIO OLIVEIRA VAZ; FABIO MACHADO BALDISSERA; JEPI PARTICIPACOES LTDA; LUANNA GOMES BUENO; RONALDO MORSELLI">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1703,7 +1704,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BOEIRA EMPREENDIMENTOS IMOBILIARIOS LTDA; DEBORA GALVAO HOLDING LTDA; LMC EMPREENDIMENTOS E PARTICIPACOES LTDA; LUCIANA DORA COSTA">Parcial</button></td>
 <td class="col-fracoes">2, 3, 6, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:60%"></span><span class="pct-num">60%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:60%"></span><span class="pct-num">60%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1718,7 +1719,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="FIDO PARTICIPACOES S.A.; JFZ PARTICIPACOES LTDA; PEDRO PIRES DE CAMPOS NETO; RVT PARTICIPACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1733,7 +1734,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="AUGUSTO CESAR DE VIDAL BASTOS; BRUNO GIACOMET BORGES; CAIO DE FARIA MAIA; GILSON VIVIAN; LUCAS REIS RAMOS NASCIMENTO; LUCAS TECCHIO MOTTA; ROBSON RIZZOTTO">Parcial</button></td>
 <td class="col-fracoes">2</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 498.500</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1748,7 +1749,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BETHANIA BREDA GASPARETTO; JOAO CARLOS MEDEIROS; LUIZ PEDRO DE SOUZA; MATHEUS BRONZON DE ARAUJO; MONTIANO EMPREENDIMENTOS S A">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1763,7 +1764,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BAUMMARIAS PARTICIPACOES LTDA; ELAINE APARECIDA FERREIRA DOS SANTOS; FREDERICO STURMER; GUIDO NEULS JUNIOR; NADIA DE MATOS MARTINELLI; ROKA PATRIMONIAL LTDA">Parcial</button></td>
 <td class="col-fracoes">7, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1778,7 +1779,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ROBINSON ELIAS CAMOLEZ BATISTA; ROCHA E MUCHLOWSKI PARTICIPAÇÕES LTDA; SCHIAVINATO INDUSTRIAL LTDA; SOL INCORPORADORA E ADMINISTRADORA DE BENS LTDA">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1793,7 +1794,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="4FAMILY EMPREENDIMENTOS LTDA; APENAS SERVO TUR COMUNICACAO E MARKETING LTDA; EDILSON JOSE DA ROCHA; GIOVANNI LUIZ NARDELLO ROTTA; RICARDO DA SILVA VIANA; TATIANE ROQUE VAZ">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1823,7 +1824,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CARINE SANTOS MARTINI; DANIEL SOBREIRA DA SILVA; IURI MARQUES PATUZZI; MARCELO VIEIRA; MORGANA LOUISE BUSNARDO; MULAN HOLDING LTDA; ROSSEANE REBUIT DOS SANTOS">Parcial</button></td>
 <td class="col-fracoes">8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1838,7 +1839,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANDRE SANTANA MELO; AVALSAFE PARTICIPACOES LTDA; CRISTIANO DORNELES MILLER; GABRIEL NUNES DE ABREU; GILSON FERREIRA OGANDO">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1853,7 +1854,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ACW4X HOLDING PATRIMONIAL S.A.; ADS PARTICIPACOES LTDA; EVORA INVESTIMENTOS E PARTICIPACOES LTDA; FERNANDO AMENT; RAFAEL BONANATA DA ROCHA; WILSON VOLPATO">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -1868,7 +1869,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="FREDERICO STURMER; JAIRO BIRAMAR DE OLIVEIRA; NIVALDO DE OLIVEIRA JUNIOR; OLIVIA CAMPOS MELO FONTOURA; RAFAEL DE ARRUDA ALVIM PINTO">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -1883,7 +1884,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="FABIANO ALVES DE OLIVEIRA; LEANDRO ZEFERINO DIAS; MCARVALHO ZICA EIRELI ME; OLIVIA CAMPOS MELO FONTOURA; RICARDO COUTO DE PRADA; SERGIO COSTA LAGE">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 506.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 91 m²">55 m²</span></td>
@@ -2018,7 +2019,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CHRISTIANI COSTA DE ARECIPPO; JUNIOR CARLOS DANIEL">Parcial</button></td>
 <td class="col-fracoes">3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 1.080.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2033,7 +2034,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="FARMACIA SHALON LTDA; GUSTAVO ZIPPERER; OTEPART - EMPREENDIMENTOS E PARTICIPACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">2</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></span></td>
 <td class="mono">R$ 1.100.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2078,7 +2079,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALEXANDRE ESTRELLA SALVIA; ANA PAULA CALIL JANICKE; CARLOS AUGUSTO ROCHA DOS SANTOS; FABIO RODRIGO MARQUES; FLAVIO MALDONADO; JUNIA ROHENKOHL; LEONARDO DA FONSECA LIEDKE; RAPHAEL ATILIO BOARETTO; RENAN FERREIRA MASSON">Parcial</button></td>
 <td class="col-fracoes">10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2138,7 +2139,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ERICH GOMES MARQUES; KASSER TOUFIC BITTAR NETO; KLAUBER DE ARAUJO SOUZA AZEVEDO; LAURA WIESEL DE OLIVEIRA CANASSA; LCA PARTICIPACOES LTDA; RODRIGO ROZAURO DONADUSSI">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2153,7 +2154,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ARTHUR LUIZ LIMA CAPELLA; JOSIANE CACILDA SEVERO DE ROSA; KARLLA CARVALHO COSTA; LACYR ANTONIO PINI JUNIOR; LIM PARTICIPAÇOES LTDA; PAULO PORTO DE BARROS; PETT &amp; CAPELLATO REPRESENTACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:20%"></span><span class="pct-num">20%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2183,7 +2184,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="B.M.F. GESTAO PATRIMONIAL LTDA; DKL PATRIMONIAL LTDA; JOYCE RIBEIRO; MARIA DO SOCORRO ROCHA FERREIRA MATOS; MARIA LUIZA SANTOS LIMA; WALKIRIA FERNANDES MOREIRA DA SILVA">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2213,7 +2214,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ADILSON VERWIEBE; ALAN SOARES DA SILVEIRA; APENAS SERVO TUR COMUNICACAO E MARKETING LTDA; FREDERICO STURMER; LAE HOLDING LTDA; MARILIA GARCIA BRANDAO KOELLE">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2228,7 +2229,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BRUNO DE FIGUEIREDO PIMPAO; CHALABI SERVICOS DE SAUDE LTDA; DIEGO LUCIANO LOPES DA COSTA; FELIPE DEPPE ALVES; FLAVIO ELIAS RIBAS; MIRIAM GUERRA DAMBORIARENA LOUREGA; VANDERLEI SIMOES DA COSTA ROCHA">Parcial</button></td>
 <td class="col-fracoes">10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2243,7 +2244,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALFAPAR PARTICIPACOES &amp; NEGOCIOS IMOBILIARIOS LTDA.; ANDREA GIUGLIANI; CARMEN MARTINS MORGADO DE JESUS; FABIANE ROMAO; GUSTAVO KOCH PINHEIRO; LETICIA BARBOSA DE CASTRO PRIORI">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2258,7 +2259,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ADRIANE BURTET GHISI; ALCIONE ANTONIO SANTIN; BRUNO GHISI; CESAR PIZZATO QUADROS; EDUARDO PERES SOUZA; ISIS GOMEZ MARTINS; NASSIB AKIL GATTAS; RAFAEL LAURIA MARCAL TUCCI; SERGIO FONSECA DE CARVALHO FILHO">Parcial</button></td>
 <td class="col-fracoes">1</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:10%"></span><span class="pct-num">10%</span></span></td>
 <td class="mono">R$ 498.500</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2288,7 +2289,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CEDRIA INVESTIMENTOS LTDA; GLP ADMINISTRADORA DE BENS LTDA; JULIA HELENA DA CRUZ LUIZ; MARCELO HOFFMANN; MARCIO SOUZA CARNEIRO; MARISA CARVALHO RAPHAEL">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2303,7 +2304,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALFAPAR PARTICIPACOES &amp; NEGOCIOS IMOBILIARIOS LTDA.; EVANDRO GERMANO DE SOUZA; JOSE RICARDO PATARO BOTELHO DE QUEIROZ; LUCIA BEATRIZ VELLOSO GASPARY; MARCIA HELENA SCHNECK; TRANSPORTES LUZIA LTDA">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2318,7 +2319,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="C&amp;M ADMINISTRADORA DE IMOVEIS LTDA; CAMILA OLIVEIRA DA SILVA; DANIEL FERREIRA BRANCHER; HENRIQUE LAWISCH CARGNELUTTI; JADER DE SOUZA SILVA; RODRIGO ALBEJANTE HOFFMANN">Parcial</button></td>
 <td class="col-fracoes">2, 7, 8</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 488.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2333,7 +2334,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CARLA DELLA BONA; DAVIPAR PARTICIPACOES &amp; NEGOCIOS IMOBILIARIOS LTDA; ISMAEL ROGGIA SILVA; LYDIANE PEREIRA LEAL; RICARDO FORTES CORREA MEYER">Parcial</button></td>
 <td class="col-fracoes">7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 497.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2448,7 +2449,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.586.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 119,2 m²">79 m²</span></td>
@@ -2478,7 +2479,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.561.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,6 m²">78 m²</span></td>
@@ -2493,7 +2494,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.893.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,6 m²">78 m²</span></td>
@@ -2508,7 +2509,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.561.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,6 m²">78 m²</span></td>
@@ -2523,7 +2524,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="BRUNO GARCIA DE LIMA; MARIANA PASTORE SENISE FURIO">Parcial</button></td>
 <td class="col-fracoes">1, 3</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 1.893.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,6 m²">78 m²</span></td>
@@ -2538,7 +2539,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.404.250</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,6 m²">78 m²</span></td>
@@ -2568,7 +2569,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.877.750</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 156,9 m²">104 m²</span></td>
@@ -2583,7 +2584,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 2.299.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 139,1 m²">91 m²</span></td>
@@ -2598,7 +2599,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 520.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2613,7 +2614,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 429.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2628,7 +2629,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 429.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2643,7 +2644,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 631.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2658,7 +2659,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2673,7 +2674,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2688,7 +2689,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2703,7 +2704,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 429.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2718,7 +2719,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 520.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2733,7 +2734,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.803.500</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 141,8 m²">91 m²</span></td>
@@ -2748,7 +2749,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2763,7 +2764,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.891.500</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 159,3 m²">106 m²</span></td>
@@ -2778,7 +2779,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -2793,7 +2794,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.418.250</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120 m²">80 m²</span></td>
@@ -2808,7 +2809,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-warn">Parcial</span></td>
 <td class="col-fracoes">1, 2, 3</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:75%"></span><span class="pct-num">75%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:75%"></span><span class="pct-num">75%</span></span></td>
 <td class="mono">R$ 1.911.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120 m²">80 m²</span></td>
@@ -2823,7 +2824,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.418.250</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120 m²">80 m²</span></td>
@@ -2838,7 +2839,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.719.750</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120 m²">80 m²</span></td>
@@ -2853,7 +2854,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.945.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 163,8 m²">109 m²</span></td>
@@ -2868,7 +2869,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.719.750</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120 m²">80 m²</span></td>
@@ -2898,7 +2899,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.953.500</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 148,4 m²">103 m²</span></td>
@@ -2928,7 +2929,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 3.091.750</td>
 <td class="mono">R$ 12.398.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 225,1 m²">140 m²</span></td>
@@ -2958,7 +2959,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.949.750</td>
 <td class="mono">R$ 7.818.000</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 143,1 m²">89 m²</span></td>
@@ -2973,7 +2974,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="EDUARDO GONCALVES REIS; MARISA CARVALHO RAPHAEL; NVM ADMINISTRACAO E PARTICIPACAO LTDA; VITORIO PARTICIPACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:30%"></span><span class="pct-num">30%</span></span></td>
 <td class="mono">R$ 520.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -2988,7 +2989,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALMUS EMPREENDIMENTOS E PARTICIPACOES LTDA; CLARA LUCIA UCHOA FREITAS; GUILHERME MARCIANO PRESTES DA SILVA; MIGLIOLI VENTURES HOLDING ADMINISTRACAO E PARTICIPACOES LTDA; TFC ENGENHARIA LTDA">Parcial</button></td>
 <td class="col-fracoes">6, 7, 8, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:40%"></span><span class="pct-num">40%</span></span></td>
 <td class="mono">R$ 429.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 89,3 m²">54 m²</span></td>
@@ -3003,7 +3004,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="AILTON ANTONIO OLIVEIRA DE MORAES; CCNN IMOVEIS LTDA; LUCAS SCHIRMER MARTINS; LUIZ AMERICO LOCATTO FIGUEIREDO; PEDRO LUIZ POZZA">Parcial</button></td>
 <td class="col-fracoes">3, 4, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3018,7 +3019,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3033,7 +3034,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="DTRF PARTICIPACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">1, 3, 4, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3048,7 +3049,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3063,7 +3064,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ANASTASSIADIS INTERIOR DESIGN E CONSULTORIA EM NEGOCIOS LTDA; L. G. EMPREENDIMENTOS LTDA; NELSON NERY JUNIOR">Parcial</button></td>
 <td class="col-fracoes">5, 6, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3078,7 +3079,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="DANIEL MARCON DE CARVALHO">Parcial</button></td>
 <td class="col-fracoes">2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:90%"></span><span class="pct-num">90%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:90%"></span><span class="pct-num">90%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3093,7 +3094,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3108,7 +3109,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="JACKSON LOPES QUATORZE VOLTAS; MOISES MEIRELES SALLES BRUNO; PAULO EDUARDO SILVA DUARTE">Parcial</button></td>
 <td class="col-fracoes">2</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></span></td>
 <td class="mono">R$ 1.831.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,4 m²">71 m²</span></td>
@@ -3123,7 +3124,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="TFC ENGENHARIA LTDA">Parcial</button></td>
 <td class="col-fracoes">2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:90%"></span><span class="pct-num">90%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:90%"></span><span class="pct-num">90%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3138,7 +3139,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="MARCELO LIPERT; RODRIGO MARTINS DE CASTRO GOMES; RPF HOLDING SA">Parcial</button></td>
 <td class="col-fracoes">1</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></span></td>
 <td class="mono">R$ 1.831.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,4 m²">71 m²</span></td>
@@ -3153,7 +3154,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3168,7 +3169,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ALESSANDRO PEREIRA - SOCIEDADE INDIVIDUAL DE ADVOCACIA; FERNANDA EMILIA COTA CAMPOS">Parcial</button></td>
 <td class="col-fracoes">1, 2, 4, 5, 6, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3198,7 +3199,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3213,7 +3214,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ARTHUR LUIZ LIMA CAPELLA; HENRY CORVINO HILA">Parcial</button></td>
 <td class="col-fracoes">3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:80%"></span><span class="pct-num">80%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3258,7 +3259,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 510.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3273,7 +3274,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="CAROLINE MENDES BASTIANI">Parcial</button></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:90%"></span><span class="pct-num">90%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:90%"></span><span class="pct-num">90%</span></span></td>
 <td class="mono">R$ 530.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 91 m²">55 m²</span></td>
@@ -3303,7 +3304,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="DIAMONDS PARTICIPACOES LTDA">Parcial</button></td>
 <td class="col-fracoes">1, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:75%"></span><span class="pct-num">75%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:75%"></span><span class="pct-num">75%</span></span></td>
 <td class="mono">R$ 3.417.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 208,4 m²">126 m²</span></td>
@@ -3333,7 +3334,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 2.142.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 132,3 m²">80 m²</span></td>
@@ -3363,7 +3364,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 492.100</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3378,7 +3379,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 3.996.750</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 234,9 m²">142 m²</span></td>
@@ -3393,7 +3394,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 492.100</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3438,7 +3439,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 3.996.750</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 234,9 m²">142 m²</span></td>
@@ -3468,7 +3469,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 4.053.250</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 238,2 m²">144 m²</span></td>
@@ -3483,7 +3484,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 1.671.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 119,1 m²">72 m²</span></td>
@@ -3498,7 +3499,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="ELINTON BOBRIK; IGUA PARTICIPACOES LTDA; JULIANE CRISTINE RIDDER">Parcial</button></td>
 <td class="col-fracoes">2</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:25%"></span><span class="pct-num">25%</span></span></td>
 <td class="mono">R$ 1.831.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 117,4 m²">71 m²</span></td>
@@ -3513,7 +3514,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3528,7 +3529,7 @@ footer {
 <td class="col-tipo">6 e 4 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 421.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 87,7 m²">53 m²</span></td>
@@ -3543,7 +3544,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><button type="button" class="pill pill-warn pill-clicavel" data-compradores="IGOR VIEIRA XAVIER; LEONARDO CASAROTTO">Parcial</button></td>
 <td class="col-fracoes">1, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:50%"></span><span class="pct-num">50%</span></span></td>
 <td class="mono">R$ 1.883.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 120,7 m²">73 m²</span></td>
@@ -3573,7 +3574,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 3.417.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 208,4 m²">126 m²</span></td>
@@ -3603,7 +3604,7 @@ footer {
 <td class="col-tipo">13 SEMANAS</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">1, 2, 3, 4</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">R$ 2.142.000</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 130,7 m²">79 m²</span></td>
@@ -6536,7 +6537,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6551,7 +6552,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6566,7 +6567,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6581,7 +6582,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6611,7 +6612,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6626,7 +6627,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6641,7 +6642,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
@@ -6656,7 +6657,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td class="col-tipo">VAGA (integral)</td>
 <td><span class="pill pill-ok">Disponível</span></td>
 <td class="col-fracoes">Integral</td>
-<td class="col-pct"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></td>
+<td class="col-pct"><span class="pct-wrap"><span class="barra-pct" style="--pct:100%"></span><span class="pct-num">100%</span></span></td>
 <td class="mono">—</td>
 <td class="mono">—</td>
 <td class="mono col-area"><span title="Área total (com áreas comuns): 66 m²">27,2 m²</span></td>
