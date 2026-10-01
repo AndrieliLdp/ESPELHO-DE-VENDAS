@@ -516,7 +516,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 12:34</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>01/10/2026 às 12:41</strong></div>
 </header>
 
 <section class="resumo">
@@ -5330,56 +5330,55 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 }
 .sim-btn.sec { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .sim-btn:hover { filter: brightness(1.08); }
-.sim-scroll { overflow-x: auto; border-radius: 6px; box-shadow: var(--shadow); }
+.sim-scroll { overflow-x: auto; }
 
-/* Folha no visual da planilha (fica clara tambem no tema escuro, como o Excel) */
+/* Folha com a estrutura da planilha PV MAIOR, nas cores do Espelho (claro/escuro) */
 .sim-folha {
-  --x-navy: #002060; --x-amarelo: #FFFF99; --x-vermelho: #FF0000; --x-borda: #000;
-  background: #fff; color: #000; font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
-  font-size: 13px; padding: 22px 26px 28px; min-width: 960px; width: 960px; margin: 0 auto;
+  --s-head: #1E2A44; --s-head-txt: #fff; --s-edit: var(--warn-bg); --s-alerta: var(--blocked); --s-borda: var(--border);
+  background: transparent; color: var(--text); font-family: inherit;
+  font-size: 13px; padding: 4px 0 8px; min-width: 980px; width: 980px; margin: 0 auto;
 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sim-folha { --s-head: #2B3A5E; } }
+:root[data-theme="dark"] .sim-folha { --s-head: #2B3A5E; }
 .sim-folha table { border-collapse: collapse; width: auto; font-size: 13px; }
-.sim-folha td, .sim-folha th { border: 1px solid var(--x-borda); padding: 2px 6px; white-space: nowrap; height: 21px; color: #000; background: #fff; }
+.sim-folha td, .sim-folha th { border: 1px solid var(--s-borda); padding: 3px 7px; white-space: nowrap; height: 24px; color: var(--text); background: var(--surface); }
 .sim-folha .num { text-align: right; font-variant-numeric: tabular-nums; }
 .sim-folha .cen { text-align: center; }
-.sim-folha .am { background: var(--x-amarelo); }
-.sim-folha .navy, .sim-folha th.navy { background: var(--x-navy); color: #fff; font-weight: 700; text-align: center; }
-.sim-folha .verm { background: var(--x-vermelho); color: #fff; font-weight: 700; text-align: center; }
-.sim-folha .neg { font-weight: 700; }
-.sim-folha .tot td { font-weight: 700; }
+.sim-folha .am { background: var(--s-edit); }
+.sim-folha .navy, .sim-folha th.navy { background: var(--s-head); color: var(--s-head-txt); font-weight: 600; text-align: center; }
+.sim-folha .verm { background: var(--s-alerta); color: #fff; font-weight: 600; text-align: center; }
+.sim-folha .tot td { font-weight: 700; background: var(--surface-2); }
 .sim-folha .sem-borda { border: none; background: transparent; }
 .sim-folha input, .sim-folha select {
-  width: 100%; border: none; background: transparent; font: inherit; color: #000; padding: 0; margin: 0;
+  width: 100%; border: none; background: transparent; font: inherit; color: var(--text); padding: 0; margin: 0;
   text-align: inherit; outline: none; min-width: 0;
 }
-.sim-folha input:focus, .sim-folha select:focus { outline: 2px solid #217346; outline-offset: -2px; }
+.sim-folha select option { background: var(--surface); color: var(--text); }
+.sim-folha input:focus, .sim-folha select:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
 .sim-folha input[type=number]::-webkit-inner-spin-button, .sim-folha input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 .sim-folha input[type=number] { -moz-appearance: textfield; }
 /* data vazia fica em branco, como a celula do Excel */
 .sim-folha input[type=date]:invalid::-webkit-datetime-edit { color: transparent; }
-.sim-folha input[type=date]:focus::-webkit-datetime-edit { color: #000; }
-.sim-topo { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 22px; }
-.sim-topo .info td:first-child { width: 228px; }
-.sim-topo .info td:last-child { width: 230px; text-align: center; }
-.sim-topo .info tr.navy-l td:first-child { background: var(--x-navy); color: #fff; font-weight: 700; text-align: center; }
-.sim-topo .logo { padding-top: 34px; }
-.sim-topo .logo img { width: 170px; height: auto; display: block; }
+.sim-folha input[type=date]:focus::-webkit-datetime-edit { color: var(--text); }
+.sim-topo { margin-bottom: 22px; }
+.sim-topo .info td:first-child { width: 250px; }
+.sim-topo .info td:last-child { width: 250px; text-align: center; }
+.sim-topo .info tr.navy-l td:first-child { background: var(--s-head); color: var(--s-head-txt); font-weight: 600; text-align: center; }
 .sim-grade td.c-parc { width: 62px; text-align: center; }
-.sim-grade td.c-per { width: 108px; text-align: center; }
-.sim-grade td.c-data { width: 92px; text-align: center; }
-.sim-grade td.c-val { width: 98px; }
-.sim-grade td.c-forma { width: 52px; text-align: center; }
+.sim-grade td.c-per { width: 112px; text-align: center; }
+.sim-grade td.c-data { width: 112px; text-align: center; }
+.sim-grade td.c-val { width: 100px; }
+.sim-grade td.c-forma { width: 88px; text-align: center; }
 .sim-grade td.c-pct { width: 70px; text-align: right; }
-.sim-grade .titulo td { height: 24px; }
-.sim-grade th { font-weight: 700; text-align: center; background: #fff; }
-.sim-grade .pct-fora { border-left: 1px solid var(--x-borda); }
+.sim-grade th { font-weight: 600; text-align: center; background: var(--surface-2); color: var(--text-muted); font-size: 12px; }
 .sim-espaco { height: 22px; }
-.sim-vp td { height: 22px; }
-.sim-vp td.rot { width: 150px; font-weight: 700; }
-.sim-vp td.val { width: 110px; text-align: right; }
-.sim-vp .dif-val { color: var(--x-vermelho); font-weight: 700; }
-.sim-vp .dif-val.pos { color: #00B050; }
-.sim-vp .dif-pct { font-weight: 700; text-align: center; }
+.sim-vp td.rot { width: 170px; font-weight: 600; }
+.sim-vp td.val { width: 120px; text-align: right; }
+.sim-vp .dif-val { color: var(--blocked); font-weight: 700; }
+.sim-vp .dif-val.pos { color: var(--ok); }
+.sim-vp .dif-pct { font-weight: 700; text-align: center; min-width: 80px; }
+.sim-vp .dif-pct.neg { background: var(--blocked-bg); color: var(--blocked); }
+.sim-vp .dif-pct.pos { background: var(--ok-bg); color: var(--ok); }
 .sim-nota { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.8rem; }
 
 @media print {
@@ -5387,8 +5386,8 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
   body { background: #fff !important; }
   body * { visibility: hidden !important; }
   #sim-folha, #sim-folha * { visibility: visible !important; }
-  #sim-folha { position: absolute; left: 0; top: 0; margin: 0; padding: 0; box-shadow: none; zoom: 0.78; }
-  .sim-scroll { overflow: visible !important; box-shadow: none !important; }
+  #sim-folha { position: absolute; left: 0; top: 0; margin: 0; padding: 0; zoom: 0.76; }
+  .sim-scroll { overflow: visible !important; }
   .sim-folha * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .sim-folha select { -webkit-appearance: none; appearance: none; }
   .sim-folha input::-webkit-calendar-picker-indicator { display: none; }
@@ -5408,18 +5407,17 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
       <tr><td>Empreendimento</td><td class="am">Kempinski Laje de Pedra</td></tr>
       <tr><td>Unidade</td><td class="am"><select id="sim-unidade" onchange="simOnUnidade()"><option value="">Unidade</option><option value="0">A105 13 SEMANAS</option><option value="1">A106 INTEGRAL</option><option value="2">A115 INTEGRAL</option><option value="3">A215 INTEGRAL</option><option value="4">B101 6 SEMANAS</option><option value="5">B101 4 SEMANAS</option><option value="6">B103 INTEGRAL PNE</option><option value="7">B104 INTEGRAL PNE</option><option value="8">B105 13 SEMANAS</option><option value="9">B109 6 SEMANAS</option><option value="10">B109 4 SEMANAS</option><option value="11">B110 4 SEMANAS</option><option value="12">B111 4 SEMANAS</option><option value="13">B112 4 SEMANAS</option><option value="14">B114 4 SEMANAS</option><option value="15">B116 4 SEMANAS</option><option value="16">B117 4 SEMANAS</option><option value="17">B118 4 SEMANAS</option><option value="18">B119 6 SEMANAS</option><option value="19">B122 4 SEMANAS</option><option value="20">B123 6 SEMANAS</option><option value="21">B123 4 SEMANAS</option><option value="22">B126 4 SEMANAS</option><option value="23">B128 6 SEMANAS</option><option value="24">B128 4 SEMANAS</option><option value="25">B129 6 SEMANAS</option><option value="26">B129 4 SEMANAS</option><option value="27">B130 4 SEMANAS</option><option value="28">B132 4 SEMANAS</option><option value="29">B201 6 SEMANAS</option><option value="30">B201 4 SEMANAS</option><option value="31">B202 4 SEMANAS</option><option value="32">B203 4 SEMANAS</option><option value="33">B205 13 SEMANAS</option><option value="34">B207 13 SEMANAS</option><option value="35">B208 13 SEMANAS</option><option value="36">B209 4 SEMANAS</option><option value="37">B210 4 SEMANAS</option><option value="38">B211 4 SEMANAS</option><option value="39">B214 6 SEMANAS</option><option value="40">B214 4 SEMANAS</option><option value="41">B215 4 SEMANAS</option><option value="42">B216 4 SEMANAS</option><option value="43">B217 6 SEMANAS</option><option value="44">B217 4 SEMANAS</option><option value="45">B218 4 SEMANAS</option><option value="46">B219 6 SEMANAS</option><option value="47">B220 4 SEMANAS</option><option value="48">B221 4 SEMANAS</option><option value="49">B222 4 SEMANAS</option><option value="50">B223 4 SEMANAS</option><option value="51">B225 4 SEMANAS</option><option value="52">B226 4 SEMANAS</option><option value="53">B227 4 SEMANAS</option><option value="54">B228 4 SEMANAS</option><option value="55">B229 4 SEMANAS</option><option value="56">B307 13 SEMANAS</option><option value="57">B308 13 SEMANAS</option><option value="58">B311 4 SEMANAS</option><option value="59">B315 4 SEMANAS</option><option value="60">B316 4 SEMANAS</option><option value="61">B318 4 SEMANAS</option><option value="62">B320 4 SEMANAS</option><option value="63">B321 4 SEMANAS</option><option value="64">B322 4 SEMANAS</option><option value="65">B323 6 SEMANAS</option><option value="66">B325 4 SEMANAS</option><option value="67">B326 4 SEMANAS</option><option value="68">B327 6 SEMANAS</option><option value="69">B327 4 SEMANAS</option><option value="70">B328 4 SEMANAS</option><option value="71">C002 13 SEMANAS</option><option value="72">C004 13 SEMANAS</option><option value="73">C005 13 SEMANAS</option><option value="74">C006 13 SEMANAS</option><option value="75">C007 13 SEMANAS</option><option value="76">C011 13 SEMANAS</option><option value="77">C101 6 SEMANAS</option><option value="78">C101 4 SEMANAS</option><option value="79">C102 6 SEMANAS</option><option value="80">C102 4 SEMANAS</option><option value="81">C103 6 SEMANAS</option><option value="82">C103 4 SEMANAS</option><option value="83">C104 6 SEMANAS</option><option value="84">C104 4 SEMANAS</option><option value="85">C105 6 SEMANAS</option><option value="86">C105 4 SEMANAS</option><option value="87">C106 6 SEMANAS</option><option value="88">C106 4 SEMANAS</option><option value="89">C107 6 SEMANAS</option><option value="90">C107 4 SEMANAS</option><option value="91">C108 6 SEMANAS</option><option value="92">C108 4 SEMANAS</option><option value="93">C109 6 SEMANAS</option><option value="94">C109 4 SEMANAS</option><option value="95">C111 6 SEMANAS</option><option value="96">C111 4 SEMANAS</option><option value="97">C113 6 SEMANAS</option><option value="98">C113 4 SEMANAS</option><option value="99">C114 13 SEMANAS</option><option value="100">C115 13 SEMANAS</option><option value="101">C117 13 SEMANAS</option><option value="102">C119 13 SEMANAS</option><option value="103">C123 13 SEMANAS</option><option value="104">C152 INTEGRAL</option><option value="105">C154 INTEGRAL</option><option value="106">C201 4 SEMANAS</option><option value="107">C202 6 SEMANAS</option><option value="108">C202 4 SEMANAS</option><option value="109">C203 6 SEMANAS</option><option value="110">C203 4 SEMANAS</option><option value="111">C204 6 SEMANAS</option><option value="112">C204 4 SEMANAS</option><option value="113">C205 6 SEMANAS</option><option value="114">C205 4 SEMANAS</option><option value="115">C206 6 SEMANAS</option><option value="116">C206 4 SEMANAS</option><option value="117">C207 6 SEMANAS</option><option value="118">C207 4 SEMANAS</option><option value="119">C208 6 SEMANAS</option><option value="120">C208 4 SEMANAS</option><option value="121">C209 6 SEMANAS</option><option value="122">C209 4 SEMANAS</option><option value="123">C210 13 SEMANAS</option><option value="124">C211 6 SEMANAS</option><option value="125">C211 4 SEMANAS</option><option value="126">C212 13 SEMANAS</option><option value="127">C213 6 SEMANAS</option><option value="128">C213 4 SEMANAS</option><option value="129">C214 6 SEMANAS</option><option value="130">C214 4 SEMANAS</option><option value="131">C216 6 SEMANAS</option><option value="132">C216 4 SEMANAS</option><option value="133">C217 6 SEMANAS</option><option value="134">C217 4 SEMANAS</option><option value="135">C221 6 SEMANAS</option><option value="136">C221 4 SEMANAS</option><option value="137">C223 6 SEMANAS</option><option value="138">C223 4 SEMANAS</option><option value="139">C252 13 SEMANAS</option><option value="140">C254 13 SEMANAS</option><option value="141">C303 13 SEMANAS</option><option value="142">C310 13 SEMANAS</option><option value="143">C312 13 SEMANAS</option><option value="144">C314 6 SEMANAS</option><option value="145">C314 4 SEMANAS</option><option value="146">C316 6 SEMANAS</option><option value="147">C316 4 SEMANAS</option><option value="148">C318 13 SEMANAS</option><option value="149">C352 13 SEMANAS</option><option value="150">C354 13 SEMANAS</option></select></td></tr>
       <tr><td>Número da Fração</td><td class="am"><select id="sim-fracao"><option value=""></option></select></td></tr>
-      <tr><td>Data da Tabela</td><td><input id="sim-data-tabela" type="date" value="2026-10-01" onchange="simOnDataTabela()"></td></tr>
+      <tr><td>Data da Tabela</td><td><span id="sim-data-tabela-txt"></span><input id="sim-data-tabela" type="hidden" value="2026-10-01"></td></tr>
       <tr><td>Data da Proposta</td><td><input id="sim-data-proposta" type="date" value="2026-10-01" onchange="simCalc()"></td></tr>
-      <tr><td class="sem-borda" style="border-left:1px solid #000"></td><td></td></tr>
+      <tr><td class="sem-borda" style="border-left:1px solid var(--s-borda)"></td><td></td></tr>
       <tr class="navy-l"><td>CHAVES THIRD HOME</td><td><input type="text"></td></tr>
       <tr class="navy-l"><td>CORRETOR 1 / CORRETOR 2</td><td><input type="text"></td></tr>
-      <tr class="navy-l"><td>VISITOU O EMPREENDIMENTO</td><td><input type="text"></td></tr>
+      <tr class="navy-l"><td>VISITOU O EMPREENDIMENTO</td><td><select><option></option><option>SIM</option><option>NÃO</option></select></td></tr>
       <tr class="navy-l"><td>N º FU / CONCIERGE</td><td><input type="text"></td></tr>
-      <tr class="navy-l"><td>ORIGEM DA VENDA</td><td><input type="text"></td></tr>
+      <tr class="navy-l"><td>ORIGEM DA VENDA</td><td><select><option></option><option>Showroom-Trinca</option><option>Showroom</option><option>Online-Trinca</option><option>Online</option><option>Externa</option><option>Sócios</option><option>Relacionamento Corretor</option></select></td></tr>
       <tr class="navy-l"><td>DATA DE CAPTAÇÃO DO CLIENTE</td><td><input type="date" required></td></tr>
       <tr><td class="verm">Data da atualizaçao:</td><td class="verm" id="sim-data-atualizacao"></td></tr>
     </table>
-    <div class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAFLCAYAAADrvViRAAAACXBIWXMAAC4jAAAuIwF4pT92AAAgAElEQVR4nO2dsW8byfvexz9cEKRIqC/CNjAPqUIkMP0HBKKLlIF5KeNCdO3CdBsjsAzERZDCNBCnSApTQIxfeVSZylQVIM1RKdR+RSClgNMCAQKkiIPxPaN7NZrZnd2dHe4unw8g3Fkid2dnZp9555133nn0/ft3RQghNl8/f5iKX92+ePV2G6OSfmJNE3KYfP384UgpNVFKaXEZ4Uf/e+CokAt8rjYUHUIOiK+fP8wgHvrnyT6enKJDSM/BNGmulJp5rJikUHQI6SGYOmmhWSilHrfpCSk6hPQIiM0CP3u3alxQdAjpARHE5lIpda2U2uK/1/h9tFUrA0WHkI4D5/Cy5DRKi8xaKbV58ertJmUN/CTmfkfi976lsVso4YN/py44IYfO188fRhCb54FVcYnPr1+8enu7r+p79F//47/TAvMt4jUvhJm2pRgREh9YN6uAqVQGi+b0xau3102UpSxadLSF83vD99EKu4HCUoRIo8ACMIFuxoKfWNa8QfbHLaz367a8oDaYmWhr5aTgoxk+t9ynVePixzaIr58/pNwLYZRXC9A64X1JT0EcivnxRdRWwVjtG1jtUR2qZfn6+cME1k1RUN+Zdii3TWwMRnS2e4pOzFCJy7aOLKSdYHoxSxzwZgbMTWq/SOB0Ss8o5vsWxyKM6GwwQoQW9qgBkTqH+HD6RZxgpF+0JbIWfXbVtMX+9fMH/cwfCz72/sWrt6dNliMWtXeZO+bPZvNY1SjIC6g1LR/yg6+fP8yxwnrc0hox/pNV7H779fOHVYH/phPWjaSx1BYQo0mNzWWf4HFv5byUNA/E5rRmGH8WaMHHErSzGCtFgQ7jVvtufCTLpwMRmmHEChWgHVScU64DomKwmxKrpNuqjl9M4cyAaX6qiF5l8YHgbArekzcvXr1dVijX3tlLEi8I0LxEyHZnK5iEg1Wo05JWx7mIrG1kSo7+OsWgOS3hT8rgpwz2tQQIjr7mrMsD8d4zB5Ywoc9evHo7T1QskpASsSeGnfChJJ9awBKbl4gEDrLYAwVn2iX/jYvWpCuFh/40YElwSj9Pfwhsd8MFpiytGOUrWOxeP2WA4PSm77cqRzIqflUwglB4ekCJQDfVNrFxUcJi32F6dGetHJLgqLaJjgENuMwZPTjV6igiBcO7gCdovdhISqaX+OGnPDTBUW0VHfXnSLjOGTk+vXj1dpG4WKQGcBSvAq2BRVe3yZTwUf2tUuqfKaX+qefvvbTqW30ETcAo8Ms+OqZjWdVsJDSR2pfYOCgxo/UWGwo77QwsQx82KVahhMi66K0bofXnXhUIj+6ko6YbxtpQGDMq9tLElGDJt3dCFDBVNvQyEr3Cypzqu9+yE4ftYZVg6+m40f07NeIy6pJBYM2Gws6+gKjDVYBIZxCbXmccKCG+vV8o6cwJn7A2fMnGnta1EipGTDeNibBddcUKKuko7mQYf1W+fv7wz5VS/00p9fdyLvHqxau3/6ndT1KPTh0r/PXzBz1SvHb86eLFq7elTx+Eb2baMqHxsYNjvbUCVGI0P7jtLYFbGwwvX7x6u0pTsvR0TXSOMM1yOeaehXRiYdHEOA8oc2TPtzG78FVEf9Alpi6tmIKV3Jj5vi+O4lBKCo6ht8LTKdFRf3bwL44/nb949Xbm+U4si+ZS+Fy2NTbzyc2E05ritzcBKik2F5hKHcyqnaouOIZeCk/nREf90ZDXno7+s3nxIDTmKNWqL3WSTHHCcT2tKUKNCxDKukDdhjjYM4hNb6cLPgID//6zUupzzmV6JzxdFR2ftaMdzf+zptDs3XciBLPOIfc7IZiVrDKrPCY1aJnyHGxOJNTZJkeY71apcvqzoVfC00nRUfnWThVa66SN6IPaiSTj9vllNjILZJVE51ESWXUVrLSuQwTH/OKQhKeLjmQzBflXSql/VONyrV8Nsok0ZWySTu2VaoKAfMbeOJxDEZ62b4OYWk7XusvanRMaHy1LUn6GFamDchJLAjMkFAayHoLwtCGJ10gsK5v9TKOIcTOdC7ArC5JKTRNbQDu8ZNGTkXeNwD1WwZHzAcITfc8hBrEjK8TDRe2jxJOIDoL6JuJXTRxhI/k/Sql/0/WtBFUQ4QGzBk5P6L2AlwHWzaknYFVSOt1ugfBUziCI/mEG9rontygMPlsTShJSplSis9nD8SFBwYJ9R4iQtCJDOpl0PG/rroCVAZbDPdrWloExSrX2lcUQHtH+00T7CAtP8O2y6FzghfhfSqn/4vi7N1iQ3LWLbUonPcPbWhiYBKyUZdaomlyIMJVdBPTnKOdRVREecfpp3cDTuuzECb53jvOuiI404bZ2Z8u5/s+H7m9oGxAa81KEJjb3cTeqQoSaCt48ErmQQ17iqPFJAcLzL5VS/zhSnTaBaacfm3vbJjr2XiYjMrmNl9MozC7YEjBlmpfMK1OWCzEdrCVCIj5qGvvUh4rlyRMe/RI/in1P1Kehru9HmfxXqURn7vGIb+ENv41ghrqCBZMk+SJ+Kp5lFYtMJEm7LdiYOxX/rRIQ2Xj0deCZ5mW4EIP8NvQ9tI4SL7N/8McK3k8RH8BLoriClSOHywCj1cHt+9k3exYbwwD3b7IMSTIeYuCu46PcWZuVKw/yeNZrkYI3JB9Vhulpd7dB2GDe/bvjT7sXr9564w5EfEIQXBHLB51vWcG3YKZG0hrZilAL6XRuQ+6jczhIG+sPFc7VsrkQ/q5kIQ6eTcHvzUmnvREd9cfDrjw+g3+LVa6RMKPrjn6ZMNulH6rQB9VHSmYMVHWcwBX9LTHIxGpMY5ZNJP/X37549fZfRyxWaUSfmMmtH30THd0Z/9qCouxkwvW+C1HJUw92mHZFSxXSYOJ8JaYl3riTWGAKNY+c7K11+ZZ7ITp72gZQFpkArLHl3ZSUiMhVMPWXKRKwW1G3Zvoc4hw2qzXJAiJFCEFoMjSDiYH530qp/5DzuQwnirbGLdDVfDoxYz32xV7m27E4lIPzmqLkaaCSc2xDuatPDLqrguu0JrdR11JbGKFpMtZjH+xE6HjrHdVfP384DfDdZOjkpfYc9Z2KzmFzCKF3c21A0jDVlgGgC4ftmUaaR5g6/V+l1H+3HMA/lL/oZbe2DJj/Pyq5nymETKTfaNt+o9CzrM6xjMz4KIC602JdZsDcQbiDQj5K5GPea96jNp9lXteD//+UUn/j+H1jWyNQZhk0Vdch2Jr8PwHZ8NQhHi1TREWxqSUKOUc1Rb1PVVonOjU9+JciL/DIEzYe/UTQPMTKyqSm/+lS5K9JakEETqcO6uC8IkSStTJiEy3Na+AgYdiJhP6ND26tEZ2Sx5lIzoU/ROacPULcjKvS97YRFJ1hVjPI7YEzsQlQh+uCAeAgjgUOpUIkdmOxPxXPUd9Zq3fRraA2ZA6sIjZBo37OCJ3U2vER4SjjxrL3YaReF7TLBZZjD966qSg2yxQHD6Jsyyp97MWrt9E3ku5NdCpUhHGwBufibau14yKCAEWzfgKPB74Laz9kKoiNM8dMCioM8JWO6y4iueiUWAEx1Ipgbbu146LmsTO1rJ8A/03rgs32QYUXuNRKVJOU8Js28o4kE52S0asKpvuqbiN1ydpxIY6dCT1RUxJs/QSeZnAJwTnYxGhdFhubgCONGrFmU+XTCYmYNERfxstJgNSI+dgUIr1B2VWwXOsHltW6YFrXWsuwaUT0cJlYsdaKjQsrl/IEzxn91AnVtOiUnEo1GjOQcyJo5xK41wyYPMdUdaXCI1l7eZB/ERXObVd9OnBQi20TfqfGRAdZzk4DGivJiJBj7Vy+ePV24vh9J4AVOa9g/WjfzP9QSv2Lgs8cnP+mYmDqwZ9uGkp00Slh3WTw4CdbAcnJ1Vz6XKK2EXm7iDpE/03FwFSKTUmiik4J381eolcxgn1z/KlXuZRrWD+G3zCf38UvXbuokZ0vWvTwoRFFdEpEPu59b05OdsHenZMVwfpxRnv3gYrCnCRzYN+pLTpwRK4CAtpaEUxWsITeiLe+DXz9/OGNUurfK6X+TsXinIsMep184WqEH+wtoK+P1BKdwOlUlJMOY5JzlEcvj6wJjDAuw05srG11FsSAWJQ8LiE0PE0kIpVFJ3DncWtD5XOcyr2aZgWkObhRSv1dpdTfr3GbS+t4k71aQhHS1561MZ9RX6gkOgWnDaou5FWBv2PrGf37sJoVEmF8l2xLZGWcRbCIdvKEVpyR3oili+ecREjM3tjmWXKfOpbO1uPH6UzWuIITE592MXexCvezeY9cjixAkp04qse82PcGJtdAZZ1NNhFnYMXI2JgkTQj5kzqi40qN2DkLIWea1Un/TqCfLTjCWAhQ6NGxXWBvCdFIfUfykRixOhm5WrCa1cpzg3wE+G8yPE8lC07sz5nt+bjgKhih6ezqW1+ItWSuujoVUflBg6oLGx0DM/xFjzBu+JC7GHR+mb+P9OqEzzoUrMa1OfdOSC7cJBHg4pC7WInpy3IhlvG58tRSKDqCnGhl1UbhCcz6v1c/mzi6R560eVTTCXyJo4M24vz4zlrahwZFRxBwblBbciuHrE51aoc4LLZcaL30A4qORYDw7NW5HBiU2SkHODksKDoOAoQnuRVRIpE9E6aTVkPR8RB4ROv7pjcBljghkgnTSSeg6OQQKDyNHEov8vIWTaUUzw4nXYKiU0DgHiYVa0dyybOvebom6RwUnUACHbhKJHrahIpBxYP2aN2QTkLRKQGcuauS8SUX1gZHyUQc9xFK63fwE5IHRackFQ4NjEXyRPaENAFFpyII0FsmCPVPdtA+ISmg6NSk4hlJIewgNky/QHoFRScSmHbNa6Z9MLmHV9xLRPoKRacBrBSaZsPjkbUyZTYtbk1qTwoNOQQoOoSQpPwNq5sQkhKKDiEkKRQdQkhSKDqEkKRQdAghSaHoEEKSQtEhhCSFokMISQpFhxCSFIoOISQpFB1CSFIoOoSQpFB0CCFJoegQQpJC0SGEJIWiQwhJCkWHEJIUig4hJCkUHUJIUig6hJCkUHQIIUmh6BBCkkLRIYQkhaJDCEkKRYcQkhSKDiEkKRQdQkhSKDqEkKRQdAghSaHoEEKSQtEhhCSFokMISQpFhxCSFIoOISQpFB1CSFIoOoSQpFB0CCFJefQP/uE/OVJKTXDT2+zmausqwGA4npr/z26uNiGFHAzH+tozpdTI+tOm6Br47iTvMxbX2c3VdcVrRH3usqCcc9ST/n/9HCv7eWreY+RoB8M2u7m6rXkNyYO2cFxrgr5xrxzoG7llwXeP8spe1PZl21L2gzx817XKnFduWceF9aj875n+3rpkXeZR2EcGw/HMUecP3vWf8KFv+PeFUspXud/E/z8quLl+iKVS6sTzkXeD4XinlFpkN1drz2cm1j2LeK+UOq14jSjPXQU0um6UgfV1XUcvs5urVaRbaVF75/vjYDi+1PWX0x6F1xC42sLcR78Y+pmOPd/NBsPxouC5l+L7z1B/NrltPxiOFdp9FVjHoX3R10eW1jN/0v3f8TlZx956NAyG41Ncx+4/P+5Zsi7z8NWzEWR9j8eOP5t3fWYG9ujTK3SqTY7gGHQBfx0Mx7Feqq6y9nQYhU4TMgrF4AnaY97UDfAs64JOruviy2A4XjZVDsEx7rVNWM+G16HWkw+8O+9y+o+pyybb1Ii7S3AM+m+/wRL6YenEZo0ObLiAmhrTbAL1NhV1ohs9u7myO9k1lF4yFw93hs8YiszlHdTYRbRpTBnQYLKxzrKbq/lgON7ghRigvmJP6y6sa8p61UJXaJY7riHx/X5u9Y334rMj9IvH4t+xsNt+BMvW3EuXaaNFIGSa6eiXVVmWdCHcoS0Ya2Dfof6uMV06FXWt23QTMFWz3ymJ7/fSEstgdZnPTi0r7EebRhUdVMS9TpXdXNnm4QYKvRGfPdW/kw2OCrr3XYwMpqOsSs7Lrx1l2TdydM204OD/t4Emb1U2Vl3o+r9G3YYKnX2NEOTI/sn+vhY73HflGITq4Gx79NeP+OcTiEChVRCxHz3R06OK15Pf0VPje4KJgWsr2nSaM+gayr5TymrTuTU936BN1/jbj2vHnl7JOeqFrzJROdKJOAhp7B4iR4+BNoMhrLIuUllhISN8XaTITu0pje4X2c3VJLLgeMF9pNVykmiadSH+fwGXRDCYpsgp1cy20PBv/f69UUr9HNE3aHOvHPYftR8nu7kaSTGzLZ0RHFPl7/xHY8mpQm7H0ZbMYDg+V0o9x6+mRd+pyVHOHDpolSA2qIMLYdV8sW7xsulyocPb056Qe45y6tO30rERz6rv9zuef4u/Fa5cNcDSco4XWnk5z+1dBbVYYqphrJBVzkKGCzklu/T1kQpCM4GD3XUtX53I/nsCQZTt+eB7tug8DlydcBbYKmTeKohhK0Sn6RHmSc4KROEqQYOcOsp1t7JnL/1GWrbXKwq+dv4UKHQnOYsFvpWOpWOl5Rg/r9UfL7QeiJZNhSfYaJHDyp0R3ZCppa8f5a2CSm4h9OY6x9rKrWiNxBTpjzl/863K2f13INpU97MM06tT068YHLhHsKrg6sC3ouOv8ZlvCYRRC45rGTcKsGImcFj60IPQtyZXXBzIFzfJKhZEVdZDypXKaOA5nllTRskAg9MWCycPLJ1LT+yACohTsAPzRgEjZspKznu25FMrmKFyOvUJo99ArKbIGIrMNWeuiFl5klZH2ZigsxzHpHeKgT6hn9P4r8yP7Tj/ErjiEgNppYdYWM88vy9rdSzQpgMxzQqZnjXFmyr3h/AYH51sUzllH2AAHdmic5sTUVl042uYUqYTzwNGZvkSNW1Oe59tT8i6eaOdmmJVzwiPFKV5RH/Hj5UntKmZZp0GLpUbruvWJ75/dw1rNUlBDJr2adlO2cL7xepHmNotRDs/DxyIZRn11OwoLyq7RHm3dZ4NZTCrVa4g4cf6d7GnV9KPszDmlAu8YNLxfGhBgnejgFmtgRNyCqtGch7oIyvLUtzrcY4lGA3dJ0yQmA3qQZrpMWN1HoD+KfvdReoFBViX8plDQiVsYfC12wJT1duqC0Qh6PZ0vetYjbSnydFF51R04oEJuJIf0EoHwZFOyPN9rB61BWt/19bRqUZNzPcxMskO+67s8m0Z0PF/Q+Tzqf1M6LjypWtkqgHhO3VsP2lcdD2U8l/hXZFC9Q4W0x34t7FifRHLtcC7rAfDX/GuP3gOu1y67FGDAzHFkubiAEq7EyahreSXiWJ0tBn6PefvzwI2ofq+X/hdBzJcYC3C/mfWXFhViJgNRo+0eAHvgi4DV2DyVsD0de+tdkDM7gkcrGEpLLJv7CJOh4vaXsGnFSRyBddyBcTmgvfmfcmV4zlE2QjKR7TjVizHGy4Dy/Qtx42irUC7X0xFHzZbLk7Fu35k9eUfjvPoq1cwF3+xpgiPxTLavQexIykPCNsqfIcf00gZnMsGIzxNON+lGBz7pj91wOg8xSBjkMursm/EdJoXofvg0waD54KAKOxKfP7aMRU39XlPcErGAJUp87rgXZeCc7eQ8xM87sZUy1N635KYszBiZLNH7gxmbZVYDFm+EKG6LVFu3/VCvl9aNPWoiunEqTXVvBfXAEtAWoKLikvn0iS/N5VFe50JH8rM8s+5rlEaWBITmOFzxyC0w32XBdPtkH6Q1/bXuMa6xLQ+9Ll91wsps734kls29CHzns0dYrMMENPQKazzcwXvuinHClssfjz3o+/fi6xOQgiJB4MDCSFJoegQQpJC0SGEJIWiQwhJCkWHEJIUig4hJCkUHUJIUig6hJCkUHQIIUmh6BBCkkLRIYQkhaJDCEkKRYcQkhSKDiEkKRQdQkhSKDqEkKRQdAghSaHoEEKSQtEhhCSFokMISQpFhxCSFIoOISQpFB1CSFIoOoSQpFB0CCFJoegQsgcaOpO+E/zEDkdIOgbD8RTnfmvRmR5i1VN0CEnAYDieK6VOlVKPcbeLQ613ig4hDYEp1AI/A9bzH1B0CGmOpVLqhPV7HzqSCWmI7OZKT6meHvJUysXeLJ3BcKznt+8qfv1ZdnO1qXmt99nN1WnF+5MIwKmqZFv2jezmaqsdxoPhWFs9r1M9HqZ2E6XUdXZzdd2mat3n9OpajADHAZ+Xo8Wt51oj4agruk6rGuKQGAzHup02pq0Gw/GlfjGzmyu7XftEsmcbDMczpdTK+JEGw/EZrK5W8Oj79++tKMhgONbOto+OP2XokNvA6+jR85vjGovs5moVp7SkDoPheOXwdXzKbq4Wfa1YhzV+kd1cNbJkPhiObx2O66eh71DTtMank91cafNz5/jTpmRl2RaMHkVHFJxWMXIUZnLA9REb10pZa2KC2uZIdk15yqqzHC0PwWzvIq52Xh96pUTEOXi3pXBtE51a4oCplXHWUXDay8Ly0Z3D0iVxmAnh0a6Fl22ZWqkWxunoinle5Yvw1pvRkoLTYtAuB7kFIAUQGNcUthX0KU5ng7nsjoJDSHvphehgNeQJTMkZBYeQ9tJ50UHQ1UnZpfV9ouMoIJR5zzUaDMd7WdHRU1W9QRHLvKnuVzrVg66fNtdjASnjdlo11er03ivs3H3dtOCg086sX2+xnB/UedDwC1zHBDDOHZ85xWdMYFeGPTxL373Etaew+DTn+E7wqgWecyHuf2H9/Qh/myE1g6mHdZWoYjj+5xg0noWssOBZZyhn1HoMvO9UPPsG4mHKfVsi+rfxwRHvxxzBt4+avl8onRUdVOgX/HPRhOA40hHYZLC0nB1ZvKQLIQau+xzhPq4w+QGCyrR1NLefM2cLiHbIPx8Mx7lBdyXKuEAZ7RgQ3aFfD4bjHdohd+kb95tbolEI2mKWt9BQoh6DfX64pty4ucOS/8QRSX9mC2AZPIGtPpzbeMQANG/rzvZOig7CvI3gvIwd+CdWwo7FkuNK3X9pTgM68u8B95rgXkUv4BOEtk8cZcxDC8JRThh87jVQvlWeIAFd/l99IffCiiq963owHG+KnrNkPW5ChAfXNAsUxl8o9/zNIUjm5a47jdFi9h5t7BPXC5TpnlWId+I0oJ32Tud8OuIl0Jw1JDgbIThTeQ/dURFTIqdbpiPbfomnGP0yz730S/gbzHX9uTdKqV/Q8VwBXk/ga5nAPD/G5/RU6lPObuYTdEoXc3zXVcYJyjfCZ16ijOe+Z8K9XNOkkWOKGsqioB7naLPgesQLWsRKCMrcnkKiX0xFuUL2EHrRUzNtvWQ3VzM8h0T/+2e9dQKfset40gXBUW3ae6X8U4U7M9IaeRrZuzIYjrei8d7kBa05RmDnVAZitHKMXrl+Bs9+NNPBdTkfdD6Y10vHvXbZzZV3JM4p4/uc8uVNPx/UhZjKub7zrMgvlFPGonL69vX9JcdPJqfvWhC8PhHr+s5rOvq2N8sB+vlv5ta2hZVTDu/UKq/8qemEpYNVilM0hKnM49irEriHEZxdQJSs7b947VqFQSd0+ZwmGLWcHR/3f28XE2IzdXVEjJYzWCOSxyaVhOderjJeFJTPTPcuHX9+ba+awEpcVd1nlVOPzyrUoyqwvIIHNGvfYK0+KSxtJfYNBjnp0faLOn6lFHRBdN5BbFzO0k0s4RGpJQ1FDlFfpwyeQgSudLg6XIjT3DWKRrcMRXSxS3icI3nsOKrAl9I1gOTVxz3BzBNsYLZ21E2ZssbAol0Hk4p11eo4tS44ko3jzJVndiCcgnVXr2bW9UcO38RRwLw5qvWlX6jBcFzle1vH9xqJV9EvBqYjv1l/qurDiQ7KeGm1X57j99qaOi+1X8w3UGDVrvKmVbFKdtz3BHNdsHQ2aACfGW+Ep+7KgW2SuoLVbiGCF3DsvXf8tCk40XYsN3bWEkTfdn4OAiyElJSxAOwBR4vVFuIaFTGlOsFKaa8zWnZmyVyPMOjAG4e1oYVnXSb+wsG9lYemEiz1nLVjSXzSorQKhUvvgrW1HK7w/19M0F2MNKBiqf+oTYm2mqRTS+YF/gPfsnUhLQ2T7yKuF6aTJ1mKvuZaptfC9VcdGFrnpE6xOBIcJNkHOhenIzqDL/6iivAc7BGvMWlbAvC6mKTqnr6mEPl8nRMDJbGn/wtrcWQQc2GkzXRywyeEZ+YZhZ6I4MHKHPJZ05HptBBBeCYIjnQxQCR2ka/HFp2lywdW1VrvEm0TnTKxEdsc8/d50e7jmGXpEI36CzwvS5t8FJXjgxD/8rMj/snwJdDikdedH6LwdDq1RYHwnNQUntYs90ak6fgN+6Xetcwxar/IpcomAi+fefpc6ZSrHuGp7J/sAp3Pp4NO7dtFHSo8rs530rY8JB3AFuq2L/1WEmEEI44cCxq5Ud85LBzX6q3w9CJzIELrX3r+fFI034aPyGU2l7aUWiZUqZ2SUnQuu3zsDxKLeesvZ3WrdJ3nrMr2Unh6kyMZHfyN589fsCkvD1c06XHoFA2ddNUyH4YdwV12ZA/u7BB2s/SbtX3/TwDXRS88xCKKsOYsjvROeLogOmU33vkcfR/zBASi5Yr/0ZbSOq/Rxe73kyrz+ibwWFxlBfFJSASuCOFXLU8bWyb1xBaiXTRY2YGPlQMhEXLgsp6e9OlcsLaJToyTH+cFuV7yRibfd58jHkMHg01NTl+R6/g3dIyLMiHsIaOXRzxCpnCxTtH8kic8IoRfnsSRKzieZ6q8WhgS21Ih/sUs9S8K2kk+S23HOb7vqu9gq9vVzm2a9rdCdPAC+9JX6v07q9BKCzB5T3A9VwqKPKf0AMFg35ARUP/8KsL+LwtWvFx/y10hg1PSJWLzPIelyNJnU/XF/gJr764zi3Qj1xDcM6TqCHnpXM89LRJhkY/HJtcaQbldL3JefRjRGfj6kyMzgVOc8TnbyvK2PTaPulwFhVZ3zrVbM93dWxIvdIRl4M5tQwaz90FOZJGEusz1LrGHxr7WzMoaV4QrYdUI5Rmhc/tC3S9Ngm+RrGyN7xTdP8OG2JlI3lX0vSaK5ZYAABLOSURBVEu8UPqZVzKKOCffct7918jvkxsEiGtPUR/enNMo112yd1GPk4JnM7mLt6YtAuvxUiRXv6sP9IFfxefO0Vdu1Z8DwlL0tXt9QJTbCKXrmS/NtEm0vRlk5gXbIy7xHmxE8q4JforqaLPPTaX73PDpUv8iBviOS+lHFa73xHUtPdKIlzgvp++FK3ufKE/IC/xEdFzTEUJPOR2Iz44Cv2fu9xwvWp5YZA4/0K04CaOM/yKkLkz7HgshCK3Hx/g5FtZHaH0ofE/Wh+1019f6HekxRuLF9iWkDym3q+1DRf8JBNXUkSsZvY2so72JTqvSlbYRYdKP8HOLn3XfdgQ7LJ1GUsJ2CVg0EzE4mRf9FsLb+13hsen0uVcpiLksSroHrLm2pOboBX06y5wQ0gEoOoSQpFB0CCFJoegQQpJC0SGEJIWiQwhJCkWH5MGUrSQ6DA4kP0AQ5NYRen8Qx6KQdFB0DpjA/UEK+45+CE/fD4IjzUPROWAQ4v+tTA1kN1ePDr3eSD0oOoSQpNCRTAhJCkWHEJIUig4hJCkUnQNCr1Yhz3Pvz8vuG31qO+bTOQCwSrUQmfR6c7JA30HbzUUGy863HUWnxyDP76JCGleyZ/rcdhSdHoKgv01BYm/SQg6h7ejT6Scmxarv/C9ua2gvRW3Xee6CA0VIfFWuu3x2dR8RJ2/eO9Gi7VHFOE6o6JyzUcFnrsVRNrnH47QRX9sppX7u4vNIpOiUDom3aP3JAfD8n2KvkTZhl+Yco77iatcOiE6V87fyzrbKOyqotXSx7UK4tw1CnBppDojLO/Ppk/Ck37Z9JzIsua3VOc+ym6uuH/SfS5c7LspuDpJzHaD40rau8Z0ZrHZbiM5wRlUnBpq+is49R7I1Euijd689I86DEy07wMzRCU/adNwquY/pj4PhWP/3r47qeTDNMEfGwFraWGJ1Ik7BJHuiyJHsM0f7EufRW2ddn4APY1fmkWDNTHH8ruSJDrI79DrdJ4e0erVydEB2vu5Q2nkK4XFZ5K8x3SZ74GBER4x8b5RS75VSvzAhVf/BdOvc8aBs+z1xUMGBEB5aN4fHSmwBMRz0Ge37hMGB5BBw+SYZrb0nKDqk9/iWyLnbfj90ZnqFCM05zOIjEW1aKeALG+omVf06KM/o0E5KwIt63fegSpsutrd4Z+bZzdXE+tsIYSSqbNQ2+sAM7+ItLMnga7RedFBxC/zIOJtjrELoaNNZyEsgtnrMYV5flCzLHJX9XPxOYTl3jQjn5CHq6ARTxJ/YqzK1zq5CnS3s0yLw3OfobK3e/oI+9IAiAUnR3rHbDs86s8ttfcaO+P44GI7fZDdXuf5OlHXp2Pn+PPQaqu2iA2tkVRDifgyl9ZrK6DzzqmkCEBm6wku3w+rXLTqFEbDXEMH3KVbFxCi2aMo/gXiW1/jnGazLI7wcJ+hszwfD8QKjaVutAJfT2A6fuAMv17qp9m6i7UTeHVcQrPzcyrPTQIvGke9ZArem6GuoIuFpreiIDn8Jdb1Go08dIe464GvuGnEHw/FtgWgVlUPf6wv+6do2cWo15DttHTS5vQIv+Sme6xyh/Wt135qzLcMy1z8S0bwZLMmN9ZklPjPA53QU8LSlwjNz/M5pndnt7dg2Uau9G2y7ecG2JdNmeZ95MFtAmdZo4zP8/y0GHtdAroUnd6qVewRNzibQZ01tnrM6vBacqT11wki0sRpml91cPQj4QqWdeio7d5Oq1QEv7Xmx9dlra9QKMjXLgLpZi4Z+sPfIeu61a89S0f6dwXC8Fd/7xbwUjs/J+lGwCiZN+HuwFcLu4IX9EPVgb6HI4J+x+1Vj7Z2i7Qr6+ks8WwaLdWSV/8H7Y800nBadow+oom1SrVq9Mk5KUdkrVwfGaGo/1GNXlKlWXIxCP+eZ1I6yjKyYnqK9ZnYHijrFEmJc2GnVn1sHXNsAiu6zFPV/4RMc3MO+/+OAekqNq44e+ABjtLfPd5Sq7URf/8Xx5y+wVLTYTiEwvwi/5r3+CjH5VQzsTkHFc9i+0dxVwbYtmdtmZZ6p7hrhvKHtaMgye8ZORVkuAyw7++8DNFws1pYYFDpvc7YBOMGL91r8LcRSs6N9W7OBFtMg2zp66WnL2u3tmcapFG1n4bI09X3nUmz1gAJL3yWC99q+wHq16yJXdNrm0zmyVNP7oFpEsJIQHbx80kTdirQfBplEaupZaYgSBwI/gHx5mnJU29e9dTy3TH8ycjzjY/g4kqziwYqYiAHKrAKdWtOHDM7uBwNPxPae2hYQBp4UbVeEdwDxpAeRA37RdHljOZlz/VGtEp3s5so3UqTGHmFOipx0HmotVwtkR901mIzKrv8qSd2yiM8dwqSgnBleuLyEbbHa24V82ZtsuyKC/WwoY2PbRJiY3Y1d4c9yPttoAjOMlHLkaMqBby+1nvlWeMC2JQGCW/gmXFblNs8nJWikvVO1Xdeg6Li5t2qw5zSXtvXR1LTFfmmvu5DeE8K3rpnjqan2TtV2naKze6+ayofSwv049ihc16ryJcM6yH1IDbe3fe2+bpkp9S5WtXT2otgi/+3UkzM3Bin9ESHYTrm65fO1nX3dttVDUzx4TkTmxpg62tHGdeu01BJ6U4itFtOiCGgXlUQn8crETDzgAI7BNRx0dlBSU+WYtmiqkSrj3SHvwJ405H+p23Z786GJDaJzMeBfwu93W+b0jr1Mr/RLPBiOv/viWHBYvH6Y3yEszyE0T7ObqyPEG6TcZNiWVTWVMPnUsS/Y7QBoqr07lzhMLzCIxPgfYa29wflbE0QelxLo5KKDjuwVDAjRVixZXuIBU20odN1jnwFvtg/muCF/lqvjdO3Ej9J4LNh5JMFN1XaNgIH/VxFnpLdC6BisWrvr92HpyKAt14rDUswRM+y9SuZDwlzenjsPsMt2H/iiZ2PjEtvFgVg7D9o7kuCmarvoYPCXsUpnsbInVBKdqmqNWBATZn/h2P8yteMa9hQL4rLE3pVZ6dCf1bttI7y0LmE+QV1GA/Es9pE8g7JL0XrvVuTtHyloqr2TtF1D2M8e7dipqpZOadFBA8rGDXmIpi0cn6D5DrDfOMLjH4BOlZvjJxSIgWuZexVSlpJt5QqVPw4RT/13/TkMKqmso1hTlUbau6DtQoRnn1Mxu+9GG/yLRMdX4aUqw5OKIsQRPHN1dnRw1wsyFZ+ZBoxUTh8RrCuXKanL/03PdV3WnnCAm925QRkNA3BZDqYsS09ZphABe4Uvr06WnpfkOfYj+Rz/xg/3HBZsEyduuModZYWt4fb2td2vFdquUhK6SPjafuKqO/NceFfvfdebTwcv+9aT2SwoW1pOqtFz1z4rT/6eSzTmtZXkSDniA8xy+hTlvldOR/az3OfIybImy3aNHzt2KDd9QVmsLH6+spjMfhM8fwaxt9NWvhflvpY+M88AITH5WLbizPu73dmu/EcRnt2Vs0XFzt/TVHunajtxP1eWv1JHgUP0HtzbvC8iU+EJymr3lx3Kb+J4npqFoB+ig45mLAqzS3eWk0pRZvNzMcWPT5mdiaFQjt8K6uNuA5/nPKMHFSSuX0p0VFhHdJVv0cSSfkDnlWUwdVS0IdJVT0XC4yI4V3URIm/wUUE/UmKgMULofBFL3LuR9k7Rdqi3ibUYI7nL/BeQ/CwkPekOVs4a4S2+z8zkyrMRHVdWtqZwZvgTD2tnZDM82C2cYxk5l9eriI76M7XEacBLeIEO2OQGUJmv2YXuWKfmxcvJ/pibXBxWpSsfjU2Ga0RblanZH2vnqG6qvZtsOx33FlIGSUEWwjwD4BL3XonPu0T1E57n3kBkIpJXCXfAFt1nJkZZY2KuXJaRVmudGBtCssMDRrcwtI8CI6A5FUGa1aaMyxRRy7jHSGwJMX6Na9lhPZjOuip6UUz2upyE35fiWrEd/nX6Y+02aKq9G26792XKElDWrXi3Qu5/iuc5RmI3b/3k5kjuG1UtnS4jwtc3h3ZGV9fpa9sxtUXPwejJ89s7SF/b7tCPFT6oUyoJaQOHLjrM5EZIYg5ZdHb0cRCSnkMTHRlh3erztwnpKwezemWd9Og84ZEQ0jyHZOncO72RgkPIfjgI0cHeHbNd4ixx1kFCiKD3ooOQdrNZ8AxnPRNC9kSvRQf7QT7Ch/OSgkPI/um7pXONTXQTTqkIaQcHtfeKELJ/Dj0imRCSGIoOISQpFB1CSFIoOoSQpFB0CCFJoegQQpJC0SGEJIWiQwhJCkWHEJIUig4hJCkUHUJIUig6hJCkUHQIIUmh6BBCkkLRIYQkhaJDCEkKRYcQkhSKDiEkKT/FuNlgONYnZ35j0xHST7Kbq0exHoyWDiEkKUzMTghJCi0dQkhSKDqEkKRQdAghSaHoEEKSQtEhhCSFokMISQpFhxCSFIoOISQpFB1CSFIoOoSQpFB0CCFJoegQQpJC0SGEJIWiQwhJCkWHEJIUig4hJCkUHUJIUig6hJCkUHQIIUmh6BBCkkLRIYQkJcq5V7EZDMdHSqm5UmqmlDrG5TOl1EYptcpurtZlbjkYjvV1JvjnNvT7g+F4hHIYrrObq5Xns6fm/7Obq1PPZ/T5YNOAWzvvY5XHW5ZQrPIE10ssBsOxfpZRweV0e1/nfUDWvQP93XV2c3VboX4WSqmj0HKI74U8l8R5bes6vs9E7RMpaJ3oDIbjCcRlYP9JKfVc/wyG47Ps5mruuYSLpVLqMX6/050w8Hu6Qd9Z5dMNu3F8Vn7O9xJM7et5uNCdrKA8vs+UYVWxXmIxF4OKj3eD4fhlwctUVKdLLSBlXkgI8kfxKy0+i8CvhzyXZANxzLuO7zOx+0TjtGp65RGcDJUpOSkY3eQ1Z+LF0jzG76qyjPW8+8RTL2WEPCVfIAJVGeAaZdrdros5LHBSk7b5dFaW4LzJbq6Ospsr3eH+opQ6E397B9OyCNfoFDpiuXgSKngFvNdHtXp+6rxgobjqYJ+i88zUBdr6Fww4hqA6kfWplHqqlLoUfw56PvSrE/vXmO6HlGHqa1uUST6XLt825Lp9oTWig5HsifiVFpw7q0LPyTGl2uFX5wHXHAnzdCca+zhQsHyECl4rKaiXyb7LjLZe150qZDdXW0tcQy0VKU5StGoNNrCU1mJg1XU/reJv6jJtsnTkSLaTguP43F+ym6tZgGNPdpKl5bMo24EuhOCpLsydc5DPvrLqpY4VGA28oFIAg5y4DqoMDlJ0ZkKUH1ed5uF5tOvATGn1NWeHJjiqZY5k2Zheh2aJFYQjyxxeo9GN2TzTnynZ6LozfsP/a6tgXmO1YJ7TgRcYpaPjqJcVLIA69RID7eyV95SO2LPQeramvvY0qbBO4dcywnCh+9tgONb3fo3fLdCPyrK0LPlZU23cdlq5ZK6UitHh58KMPTdiNRiOL9H4Zo4eLBp61UqvnImOrF+USsux6NiPPX9r0mE5C6iX+R4c5k88v89K+jx8K1mXgdattHJM31gK0dGrp6PQwU/9UbdLS/xeelZAD4I+BwfKacLK8/9V5ugLYW4POjjNsqdWBiky+5hiXWIKe2FNZXUdf6zhvNdt9T7EdwJ/1l1cmLGuIDByBTXY4Q7L6bX41acuxNI0SZssHdkhajkzHcvBE+EglVbEjzl6mVFHd1wEjX3Br55XnOe/9wURNgXKGVovs8TBggu7HfDCmnrWzvtlgFX5DNMq870BAutCrFEptrc5QrcIGbBQ31/Er/Q0sRU+s33SJtHZIPhPM/X5FSAoM0SZ+l4Ku2HzgsdKz9H1SIUXwoyKXRm5ytTLfA/BgvdAPS/E1GtS1FZGuBztkzswwNclp0CPc+pnUOTPg5jL+rtsi5N+37RpeiUbaODyKaBjmPnxr3Dw2Z8ZlYwGfV5x+Vua2D7fTGvAMz4vUZ6q9RINtHfVMsj2OQ4IDCwrCN7Pc2k8n9ZYOlglkE7aEyEyW4xUp9YL7jJx5e8ufIF2ejuDuNaibKdDed8HbmtwMcqblgVM+Y583/d8Vz5fY/VSAz3Vk98eWYsBqoxD2dGftNN/k/PiS5FybruA9fIb/qmDRCeeFaiN1U+XjueTbCMJUtk+sRfatnq1gAltzOnnOaPzS3sFwbMc7GMp9tbMq7xc2idjLbGW4cQR9Sp5VHCtJ2L5Pve7YgOtIbhetF8j0Qj9seDvnyqU41Ss1j32+WKsNsx800otMGKVT+F6LqeyvRJX9GzPKi7Du+4b1Cf2SatWr9Cppo69Vvc+pkPkPfNpuRycFawS3JvO1dh31Nb9SpIy9SL/Fhz63zCfqjhgMSjJabovkly2YVEIhLzeCfdjlad1cTpGeGDKzoQD8BqjQV6n2GLUUEWxPjC/n4pVG1fcReH1ELvzNDC2ZlVzRJPlqfq9onq5tZ6nSStnUVRvgdOCvDpZBtS5tH6K4m/WAZ8p20a+aaOsH99nqvaJ/aCU+v9IbwVpwUeqmAAAAABJRU5ErkJggg==" alt="Hotel &amp; Residences Kempinski Laje de Pedra"></div>
   </div>
 
   <table class="sim-grade" id="sim-tabela">
@@ -5443,11 +5441,11 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
   <table class="sim-vp">
     <tr><td class="rot" colspan="2">V.P da Tabela</td><td class="val" id="sim-vp-tabela"></td></tr>
     <tr><td class="rot" colspan="2">V.P da Proposta</td><td class="val" id="sim-vp-proposta"></td></tr>
-    <tr><td class="rot">Diferença <span class="dif-val" id="sim-dif-valor"></span></td><td class="sem-borda" style="border-top:1px solid #000;border-bottom:1px solid #000;width:0;padding:0"></td><td class="dif-pct" id="sim-dif-pct"></td></tr>
+    <tr><td class="rot">Diferença <span class="dif-val" id="sim-dif-valor"></span></td><td class="sem-borda" style="border-top:1px solid var(--s-borda);border-bottom:1px solid var(--s-borda);width:0;padding:0"></td><td class="dif-pct" id="sim-dif-pct"></td></tr>
   </table>
 </div>
 </div>
-<p class="sim-nota">Mesmas fórmulas da planilha Simulador (aba PV MAIOR): taxa de 12% a.a. composta para mensal/semestral/bimestral, cada série trazida a valor presente na Data da Proposta. Preços da Tabela de Vendas com o INCC em dia. Células amarelas são editáveis.</p>
+<p class="sim-nota">Mesmas fórmulas da planilha Simulador (aba PV MAIOR): taxa de 12% a.a. composta para mensal/semestral/bimestral, cada série trazida a valor presente na Data da Proposta. Preços da Tabela de Vendas com o INCC em dia. Células destacadas são editáveis.</p>
 
 <script>
 (function() {
@@ -5554,7 +5552,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
         '<td class="c-val num" id="tab-g' + i + '"></td><td class="c-val num" id="tab-h' + i + '"></td><td class="c-val num" id="tab-i' + i + '"></td>' +
         '<td class="c-pct pct-fora num" id="tab-j' + i + '"></td></tr>';
     }).join('') +
-      '<tr class="tot"><td class="sem-borda" colspan="3" style="border-left:1px solid #000;border-bottom:1px solid #000"></td>' +
+      '<tr class="tot"><td class="sem-borda" colspan="3" style="border-left:1px solid var(--s-borda);border-bottom:1px solid var(--s-borda)"></td>' +
       '<td colspan="2" class="cen" id="tab-total"></td><td colspan="2"></td><td class="num" id="tab-vp"></td></tr>';
     corpo.querySelectorAll('select[data-tab]').forEach(function(s) {
       s.addEventListener('change', function() { TAB[+s.dataset.tab].per = s.value; simCalc(); });
@@ -5573,7 +5571,7 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
         '<td class="c-val num" id="p-f' + i + '"></td><td class="c-val num" id="p-g' + i + '"></td><td class="c-val num" id="p-h' + i + '"></td>' +
         '<td class="c-val num" id="p-i' + i + '"></td><td class="c-pct pct-fora num" id="p-j' + i + '"></td></tr>';
     }).join('') +
-      '<tr class="tot"><td class="sem-borda" style="border-left:1px solid #000;border-bottom:1px solid #000"></td><td colspan="3" class="cen">TOTAL</td>' +
+      '<tr class="tot"><td class="sem-borda" style="border-left:1px solid var(--s-borda);border-bottom:1px solid var(--s-borda)"></td><td colspan="3" class="cen">TOTAL</td>' +
       '<td colspan="2" class="cen" id="p-total"></td><td colspan="2" class="num" id="p-total-tp"></td><td class="num" id="p-vp"></td></tr>';
   }
 
@@ -5618,9 +5616,8 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
     pctEl.textContent = pct(dif);
     // escala de cor da planilha: vermelho (desconto) -> verde (acima da tabela)
     if (isFinite(dif)) {
-      var a = Math.min(1, Math.abs(dif) / 0.3);
-      pctEl.style.background = dif < 0 ? 'rgba(248,105,107,' + (0.35 + 0.65 * a) + ')' : 'rgba(99,190,123,' + (0.35 + 0.65 * a) + ')';
-    } else { pctEl.style.background = '#fff'; }
+      pctEl.className = 'dif-pct ' + (dif < 0 ? 'neg' : 'pos');
+    } else { pctEl.className = 'dif-pct'; }
   };
 
   // "Número da Fração": só as frações disponíveis da unidade/tipo escolhido
@@ -5630,12 +5627,6 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
     var lista = idx === '' ? [] : FRACOES[+idx];
     sel.innerHTML = (lista.length > 1 ? '<option value="">Escolha a fração</option>' : '') +
       lista.map(function(f) { return '<option>' + f + '</option>'; }).join('');
-    simCalc();
-  };
-
-  window.simOnDataTabela = function() {
-    // na planilha a Data da Proposta comeca igual a Data da Tabela (D6 = D5)
-    document.getElementById('sim-data-proposta').value = document.getElementById('sim-data-tabela').value;
     simCalc();
   };
 
@@ -5671,6 +5662,8 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
   });
 
   document.getElementById('sim-data-atualizacao').textContent = dbr('2026-10-01');
+  // Data da Tabela é fixa: 1º dia do mês seguinte ao último INCC aplicado (ex.: INCC de out aplicado em 30/10 -> 01/11)
+  document.getElementById('sim-data-tabela-txt').textContent = dbr(document.getElementById('sim-data-tabela').value);
   iniciarProposta();
   montarTabela();
   montarProposta();
