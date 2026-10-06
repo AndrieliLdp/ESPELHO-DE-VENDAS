@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="versao-espelho" content="20261006154635">
+<meta name="versao-espelho" content="20261006154935">
 <title>Espelho de Vendas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -531,6 +531,7 @@ footer {
 .pv { --pv-navy:#1E2A44; --pv-navy-2:#2B3A5E; --pv-r1:#E3E3E3; --pv-r2:#DCE9F5; --pv-faixa-bg:#E6ECF7; --pv-linha:#D5DCEA; --pv-neg:#B3261E; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pv { --pv-r1:#2A2D36; --pv-r2:#222B3C; --pv-faixa-bg:#262C3C; --pv-linha:#363D52; --pv-neg:#F2877E; } }
 :root[data-theme="dark"] .pv { --pv-r1:#2A2D36; --pv-r2:#222B3C; --pv-faixa-bg:#262C3C; --pv-linha:#363D52; --pv-neg:#F2877E; }
+.page.page-larga { max-width:1900px; }
 .pv-capa { margin-bottom:1.5rem; }
 .pv-faixa { display:block; width:150px; height:14px; margin-bottom:.9rem; background:linear-gradient(90deg,#E8A065,#B8475F 50%,#1E2A44); }
 .pv-capa h2 { font-family:"Cormorant Garamond",serif; font-weight:500; font-size:2.4rem; letter-spacing:.32em; margin:0; color:var(--text); }
@@ -545,11 +546,11 @@ footer {
 .pv-titulo { font-size:1rem; font-weight:600; letter-spacing:.34em; text-transform:uppercase; margin:0; color:var(--text); }
 .pv-sub { margin:.2rem 0 .7rem; color:var(--text-muted); font-size:.8rem; }
 .pv-tabela-wrap { overflow-x:auto; border:1px solid var(--pv-linha); border-radius:6px; background:var(--surface); }
-.pv-tab { border-collapse:collapse; width:100%; font-size:.78rem; font-variant-numeric:tabular-nums; }
-.pv-tab thead th { background:var(--pv-navy); color:#fff; font-weight:600; padding:.45rem .6rem; text-align:right; white-space:nowrap; position:sticky; top:0; }
-.pv-tab thead th.pv-lbl, .pv-tab tbody th.pv-lbl { text-align:left; position:sticky; left:0; z-index:1; min-width:150px; }
-.pv-tab tbody th.pv-lbl { background:var(--surface); color:var(--text); font-weight:500; padding:.3rem .6rem; border-right:1px solid var(--pv-linha); }
-.pv-tab td { text-align:right; padding:.3rem .6rem; white-space:nowrap; color:var(--text); }
+.pv-tab { border-collapse:collapse; width:100%; font-size:.74rem; font-variant-numeric:tabular-nums; }
+.pv-tab thead th { background:var(--pv-navy); color:#fff; font-weight:600; padding:.42rem .42rem; text-align:right; white-space:nowrap; position:sticky; top:0; }
+.pv-tab thead th.pv-lbl, .pv-tab tbody th.pv-lbl { text-align:left; position:sticky; left:0; z-index:1; min-width:118px; }
+.pv-tab tbody th.pv-lbl { background:var(--surface); color:var(--text); font-weight:500; padding:.28rem .5rem; border-right:1px solid var(--pv-linha); }
+.pv-tab td { text-align:right; padding:.28rem .42rem; white-space:nowrap; color:var(--text); }
 .pv-tab thead th.pv-ano { background:var(--pv-navy-2); }
 .pv-tab td.pv-ano { font-weight:700; }
 .pv-tab td.pv-tot { font-weight:700; border-left:2px solid var(--pv-navy); }
@@ -599,13 +600,14 @@ footer {
   body { background:#fff !important; }
   body * { visibility:hidden !important; }
   .imprimir-esta, .imprimir-esta * { visibility:visible !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-  .imprimir-esta { position:absolute; left:0; top:0; width:100%; page:paisagem; zoom:.66;
+  .imprimir-esta { position:absolute; left:0; top:0; width:100%; page:paisagem; zoom:.6;
     --bg:#fff; --surface:#fff; --surface-2:#F6F1E7; --border:#DCD3C1; --text:#24211B; --text-muted:#6F6858;
     --ok:#3F7A52; --ok-bg:#E4EFE4; --warn:#A9762C; --warn-bg:#F5EBD8; --sold:#79726A; --sold-bg:#ECE8E1;
     --blocked:#A24B3F; --blocked-bg:#F3E2DE; --accent:#8C6C3F; --accent-deep:#1E2A44; --shadow:none; }
   .imprimir-esta .pv { --pv-r1:#E3E3E3 !important; --pv-r2:#DCE9F5 !important; --pv-faixa-bg:#E6ECF7 !important; --pv-linha:#D5DCEA !important; --pv-neg:#B3261E !important; }
   .btn-imprimir, .abas-topo { display:none !important; }
   .pv-tabela-wrap, .tabela-wrap { overflow:visible !important; }
+  .pv-tab { zoom:1 !important; }
   .pv-tab thead th, .pv-tab tbody th.pv-lbl { position:static !important; }
   .pv-secao, .resumo-card { break-inside:avoid; }
   .pv-tab tr { break-inside:avoid; }
@@ -622,7 +624,7 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>06/10/2026 às 15:46</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>06/10/2026 às 15:49</strong></div>
 </header>
 
 <section class="resumo">
@@ -7098,10 +7100,23 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 function pvSub(n) {
   document.querySelectorAll('.pv-subbtn').forEach(function(b) { b.classList.toggle('pv-ativo', b.dataset.sub === n); });
   document.querySelectorAll('.pv-sub-painel').forEach(function(p) { p.classList.toggle('pv-ativo', p.id === 'pv-' + n); });
+  pvAjustar();
 }
+function pvAjustar() {
+  document.querySelectorAll('.pv-tabela-wrap').forEach(function(w) {
+    var t = w.querySelector('table');
+    if (!t || !w.clientWidth) return;            // aba escondida: ajusta quando abrir
+    t.style.zoom = 1;
+    var larg = t.scrollWidth, disp = w.clientWidth;
+    if (larg > disp) t.style.zoom = Math.max(0.5, (disp / larg) * 0.995);
+  });
+}
+window.addEventListener('resize', pvAjustar);
+window.addEventListener('load', pvAjustar);
 function pvMes(v) {
   document.querySelectorAll('.pv-mes').forEach(function(m) { m.classList.toggle('pv-ativo', m.dataset.mes === v); });
   var s = document.getElementById('pv-mes-sel'); if (s) s.value = v;
+  pvAjustar();
 }
 function pvMesPasso(d) {
   var s = document.getElementById('pv-mes-sel'); if (!s) return;
@@ -7688,6 +7703,9 @@ var PLANTAS = {"6": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoH
 function mudarAba(nome) {
   document.querySelectorAll('.aba-btn').forEach(function(b) { b.classList.toggle('aba-ativa', b.dataset.aba === nome); });
   document.querySelectorAll('.aba-painel').forEach(function(p) { p.classList.toggle('aba-ativa', p.id === 'aba-' + nome); });
+  // o painel Comercial usa a largura toda da tela e encolhe as tabelas para caberem sem barra de rolagem
+  document.querySelector('.page').classList.toggle('page-larga', nome === 'vendas');
+  if (window.pvAjustar) pvAjustar();
 }
 
 // Imprime so a aba aberta (Unidades, Resumo, Painel de vendas). O Simulador usa a regra propria dele.
