@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="versao-espelho" content="20261006142948">
+<meta name="versao-espelho" content="20261006145947">
 <title>Espelho de Vendas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,8 +128,8 @@ section.resumo {
   margin-bottom: 1.75rem;
   box-shadow: var(--shadow);
 }
-section.resumo-fracoes { margin-top: -0.75rem; }
-section.resumo-fracoes .tile .num { font-size: 1.5rem; }
+section.resumo-fracoes, section.resumo-vagas { margin-top: -0.75rem; }
+section.resumo-fracoes .tile .num, section.resumo-vagas .tile .num { font-size: 1.5rem; }
 .tile {
   background: var(--surface);
   padding: 1.1rem 1.3rem;
@@ -531,26 +531,32 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>06/10/2026 às 14:29</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>06/10/2026 às 14:59</strong></div>
 </header>
 
 <section class="resumo">
-  <div class="tile total"><span class="num">385</span><span class="lbl">Unidades totais</span></div>
-  <div class="tile d"><span class="num">58</span><span class="lbl">Disponível</span></div>
+  <div class="tile total"><span class="num">357</span><span class="lbl">Apartamentos (sem vagas)</span></div>
+  <div class="tile d"><span class="num">50</span><span class="lbl">Disponível</span></div>
   <div class="tile p"><span class="num">74</span><span class="lbl">Parcial</span></div>
-  <div class="tile v"><span class="num">79</span><span class="lbl">Vendido</span></div>
-  <div class="tile b"><span class="num">174</span><span class="lbl">Bloqueado</span></div>
+  <div class="tile v"><span class="num">65</span><span class="lbl">Vendido</span></div>
+  <div class="tile b"><span class="num">168</span><span class="lbl">Bloqueado</span></div>
 </section>
 <section class="resumo resumo-fracoes">
-  <div class="tile total"><span class="num">3.106</span><span class="lbl">Frações totais</span></div>
-  <div class="tile d"><span class="num">597</span><span class="lbl">Frações disponíveis</span></div>
-  <div class="tile v"><span class="num">835</span><span class="lbl">Frações vendidas</span></div>
-  <div class="tile b"><span class="num">1.674</span><span class="lbl">Frações bloqueadas</span></div>
+  <div class="tile total"><span class="num">3.078</span><span class="lbl">Frações totais</span></div>
+  <div class="tile d"><span class="num">589</span><span class="lbl">Frações disponíveis</span></div>
+  <div class="tile v"><span class="num">821</span><span class="lbl">Frações vendidas</span></div>
+  <div class="tile b"><span class="num">1.668</span><span class="lbl">Frações bloqueadas</span></div>
+</section>
+<section class="resumo resumo-vagas">
+  <div class="tile total"><span class="num">28</span><span class="lbl">Vagas totais</span></div>
+  <div class="tile d"><span class="num">8</span><span class="lbl">Vagas disponíveis</span></div>
+  <div class="tile v"><span class="num">14</span><span class="lbl">Vagas vendidas</span></div>
+  <div class="tile b"><span class="num">6</span><span class="lbl">Vagas bloqueadas</span></div>
 </section>
 
 
 <div class="barra-geral">
-  <span style="width:15%; background:var(--ok)"></span>
+  <span style="width:14%; background:var(--ok)"></span>
   <span style="flex:1; background:var(--border)"></span>
 </div>
 
@@ -6741,7 +6747,15 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td>0</td>
 <td>39</td>
 <td class="pct-cell pct-baixo">0%</td>
-</tr><tr>
+</tr><tr class="linha-total">
+<td>TOTAL APARTAMENTOS</td>
+<td>357</td>
+<td>50</td>
+<td>74</td>
+<td>65</td>
+<td>168</td>
+<td class="pct-cell pct-baixo">14%</td>
+</tr><tr class="linha-total">
 <td>Vagas</td>
 <td>28</td>
 <td>8</td>
@@ -6749,14 +6763,6 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
 <td>14</td>
 <td>6</td>
 <td class="pct-cell ">29%</td>
-</tr><tr class="linha-total">
-<td>TOTAL GERAL</td>
-<td>385</td>
-<td>58</td>
-<td>74</td>
-<td>79</td>
-<td>174</td>
-<td class="pct-cell pct-baixo">15%</td>
 </tr></tbody>
   </table></div>
 </div><div class="resumo-card">
