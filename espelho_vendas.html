@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="versao-espelho" content="20261006145947">
+<meta name="versao-espelho" content="20261006151510">
 <title>Espelho de Vendas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,6 +150,12 @@ section.resumo-fracoes .tile .num, section.resumo-vagas .tile .num { font-size: 
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+.tile .vgv { font-size: 0.82rem; color: var(--text); font-variant-numeric: tabular-nums; }
+.tile .vgv b { font-weight: 500; color: var(--text-muted); margin-right: 0.25rem; }
+.tile .vgv-obs { font-size: 0.72rem; color: var(--text-muted); }
+.barra-mes { background: var(--border); border-radius: 4px; height: 10px; min-width: 120px; overflow: hidden; }
+.barra-mes span { display: block; height: 100%; background: var(--ok); border-radius: 4px; }
+td.col-barra { width: 40%; }
 .tile.total .num { color: var(--accent-deep); }
 .tile.d .num { color: var(--ok); }
 .tile.p .num { color: var(--warn); }
@@ -531,27 +537,27 @@ footer {
     <span class="eyebrow">Kempinski Laje de Pedra · Canela</span>
     <h1>Espelho de Vendas</h1>
   </div>
-  <div class="atualizado">Atualizado em<br><strong>06/10/2026 às 14:59</strong></div>
+  <div class="atualizado">Atualizado em<br><strong>06/10/2026 às 15:15</strong></div>
 </header>
 
 <section class="resumo">
-  <div class="tile total"><span class="num">357</span><span class="lbl">Apartamentos (sem vagas)</span></div>
-  <div class="tile d"><span class="num">50</span><span class="lbl">Disponível</span></div>
-  <div class="tile p"><span class="num">74</span><span class="lbl">Parcial</span></div>
-  <div class="tile v"><span class="num">65</span><span class="lbl">Vendido</span></div>
-  <div class="tile b"><span class="num">168</span><span class="lbl">Bloqueado</span></div>
+  <div class="tile total"><span class="num">357</span><span class="lbl">Apartamentos (sem vagas)</span><span class="vgv"><b>VGV total</b> R$ 1,04 bi</span><span class="vgv-obs">+ 1.629 frações sem preço no sistema</span></div>
+  <div class="tile d"><span class="num">50</span><span class="lbl">Disponível</span><span class="vgv"><b>VGV a vender</b> R$ 384,3 mi</span></div>
+  <div class="tile p"><span class="num">74</span><span class="lbl">Parcial</span><span class="vgv"><b>VGV a vender</b> R$ 166,3 mi</span></div>
+  <div class="tile v"><span class="num">65</span><span class="lbl">Vendido</span><span class="vgv"><b>VGV vendido</b> R$ 280,2 mi</span><span class="vgv-obs">+ 9 frações sem preço no sistema</span></div>
+  <div class="tile b"><span class="num">168</span><span class="lbl">Bloqueado</span><span class="vgv"><b>VGV</b> R$ 45,2 mi</span><span class="vgv-obs">+ 1.620 frações sem preço no sistema</span></div>
 </section>
 <section class="resumo resumo-fracoes">
-  <div class="tile total"><span class="num">3.078</span><span class="lbl">Frações totais</span></div>
-  <div class="tile d"><span class="num">589</span><span class="lbl">Frações disponíveis</span></div>
-  <div class="tile v"><span class="num">821</span><span class="lbl">Frações vendidas</span></div>
-  <div class="tile b"><span class="num">1.668</span><span class="lbl">Frações bloqueadas</span></div>
+  <div class="tile total"><span class="num">3.078</span><span class="lbl">Frações totais</span><span class="vgv"><b>VGV total</b> R$ 1,04 bi</span><span class="vgv-obs">+ 1.629 frações sem preço no sistema</span></div>
+  <div class="tile d"><span class="num">589</span><span class="lbl">Frações disponíveis</span><span class="vgv"><b>VGV a vender</b> R$ 550,6 mi</span></div>
+  <div class="tile v"><span class="num">821</span><span class="lbl">Frações vendidas</span><span class="vgv"><b>VGV vendido</b> R$ 448,6 mi</span><span class="vgv-obs">+ 9 frações sem preço no sistema</span></div>
+  <div class="tile b"><span class="num">1.668</span><span class="lbl">Frações bloqueadas</span><span class="vgv"><b>VGV</b> R$ 45,2 mi</span><span class="vgv-obs">+ 1.620 frações sem preço no sistema</span></div>
 </section>
 <section class="resumo resumo-vagas">
-  <div class="tile total"><span class="num">28</span><span class="lbl">Vagas totais</span></div>
-  <div class="tile d"><span class="num">8</span><span class="lbl">Vagas disponíveis</span></div>
-  <div class="tile v"><span class="num">14</span><span class="lbl">Vagas vendidas</span></div>
-  <div class="tile b"><span class="num">6</span><span class="lbl">Vagas bloqueadas</span></div>
+  <div class="tile total"><span class="num">28</span><span class="lbl">Vagas totais</span><span class="vgv"><b>VGV</b> R$ 2,6 mi</span><span class="vgv-obs">+ 16 vagas sem preço no sistema</span></div>
+  <div class="tile d"><span class="num">8</span><span class="lbl">Vagas disponíveis</span><span class="vgv"><b>VGV</b> sem preço no sistema</span></div>
+  <div class="tile v"><span class="num">14</span><span class="lbl">Vagas vendidas</span><span class="vgv"><b>VGV vendido</b> R$ 2,6 mi</span><span class="vgv-obs">+ 2 vagas sem preço no sistema</span></div>
+  <div class="tile b"><span class="num">6</span><span class="lbl">Vagas bloqueadas</span><span class="vgv"><b>VGV</b> sem preço no sistema</span></div>
 </section>
 
 
@@ -563,6 +569,7 @@ footer {
 <div class="abas-topo">
   <button type="button" class="aba-btn aba-ativa" data-aba="unidades" onclick="mudarAba('unidades')">Unidades</button>
   <button type="button" class="aba-btn" data-aba="resumo" onclick="mudarAba('resumo')">Resumo Comercial</button>
+  <button type="button" class="aba-btn" data-aba="vendas" onclick="mudarAba('vendas')">Painel de vendas</button>
   <button type="button" class="aba-btn" data-aba="simulador" onclick="mudarAba('simulador')">Simulador</button>
 </div>
 
@@ -6968,6 +6975,142 @@ Clientes - Andrea e Habitasul: 007 Pinepin B-224: 006 Rafael Lacerda  B-306: 010
   <div class="tabela-wrap"><table>
     <thead><tr><th>UH</th><th>Tipo</th><th>Frações</th><th>Valor no TSE</th><th>Valor na tabela</th><th>Diferença</th></tr></thead>
     <tbody><tr><td colspan="6" style="color:var(--text-muted);">Nenhuma divergência além da defasagem de INCC</td></tr></tbody>
+  </table></div>
+</div>
+</div>
+
+<div class="aba-painel" id="aba-vendas">
+<section class="resumo">
+  <div class="tile total"><span class="num">R$ 1,04 bi</span><span class="lbl">VGV total (apartamentos)</span><span class="vgv-obs">+ 1.629 frações sem preço no sistema</span></div>
+  <div class="tile v"><span class="num">R$ 448,6 mi</span><span class="lbl">VGV vendido</span><span class="vgv-obs">45% do VGV liberado para venda</span></div>
+  <div class="tile d"><span class="num">R$ 550,6 mi</span><span class="lbl">VGV a vender</span><span class="vgv-obs">589 frações disponíveis</span></div>
+  <div class="tile b"><span class="num">R$ 45,2 mi</span><span class="lbl">VGV bloqueado</span><span class="vgv-obs">1.668 frações bloqueadas</span></div>
+</section><div class="resumo-card">
+  <div class="resumo-titulo">VGV por bloco<small>Vendido = valor negociado nos contratos · A vender e bloqueado = preço de tabela no sistema · "—" = sem preço cadastrado</small></div>
+  <div class="tabela-wrap"><table>
+    <thead><tr><th>Bloco</th><th>Frações vendidas</th><th>VGV vendido</th><th>Frações a vender</th><th>VGV a vender</th><th>VGV bloqueado</th><th>% vendido (do liberado)</th></tr></thead>
+    <tbody><tr>
+<td>Bloco A</td>
+<td>79</td><td>R$ 104,4 mi</td>
+<td>13</td><td>R$ 40,6 mi</td>
+<td>—</td>
+<td class="pct-cell">72%</td>
+</tr><tr>
+<td>Bloco B</td>
+<td>637</td><td>R$ 236,6 mi</td>
+<td>189</td><td>R$ 102,5 mi</td>
+<td>R$ 10,3 mi</td>
+<td class="pct-cell">70%</td>
+</tr><tr>
+<td>Bloco C</td>
+<td>105</td><td>R$ 107,6 mi</td>
+<td>387</td><td>R$ 407,5 mi</td>
+<td>R$ 34,9 mi</td>
+<td class="pct-cell">21%</td>
+</tr><tr>
+<td>Bloco D</td>
+<td>0</td><td>—</td>
+<td>0</td><td>—</td>
+<td>—</td>
+<td>—</td>
+</tr><tr>
+<td>Bloco E</td>
+<td>0</td><td>—</td>
+<td>0</td><td>—</td>
+<td>—</td>
+<td>—</td>
+</tr><tr>
+<td>Bloco F</td>
+<td>0</td><td>—</td>
+<td>0</td><td>—</td>
+<td>—</td>
+<td>—</td>
+</tr><tr>
+<td>Bloco G</td>
+<td>0</td><td>—</td>
+<td>0</td><td>—</td>
+<td>—</td>
+<td>—</td>
+</tr><tr class="linha-total">
+<td>TOTAL APARTAMENTOS</td>
+<td>821</td><td>R$ 448,6 mi</td>
+<td>589</td><td>R$ 550,6 mi</td>
+<td>R$ 45,2 mi</td>
+<td class="pct-cell">45%</td>
+</tr><tr class="linha-total">
+<td>Vagas</td>
+<td>14</td><td>R$ 2,6 mi</td>
+<td>8</td><td>—</td>
+<td>—</td>
+<td>—</td>
+</tr></tbody>
+  </table></div>
+</div><div class="resumo-card">
+  <div class="resumo-titulo">Vendas por mês<small>Apartamentos · pela data de venda da fração · VGV = valor negociado no contrato</small></div>
+  <div class="tabela-wrap"><table>
+    <thead><tr><th>Mês</th><th>Frações vendidas</th><th>VGV vendido</th><th></th></tr></thead>
+    <tbody><tr>
+<td>nov/2025</td>
+<td>6</td>
+<td>R$ 4,4 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:62%"></span></div></td>
+</tr><tr>
+<td>dez/2025</td>
+<td>3</td>
+<td>R$ 1,5 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:21%"></span></div></td>
+</tr><tr>
+<td>jan/2026</td>
+<td>4</td>
+<td>R$ 3,2 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:45%"></span></div></td>
+</tr><tr>
+<td>fev/2026</td>
+<td>7</td>
+<td>R$ 4,8 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:67%"></span></div></td>
+</tr><tr>
+<td>mar/2026</td>
+<td>14</td>
+<td>R$ 5,4 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:77%"></span></div></td>
+</tr><tr>
+<td>abr/2026</td>
+<td>14</td>
+<td>R$ 5,3 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:75%"></span></div></td>
+</tr><tr>
+<td>mai/2026</td>
+<td>14</td>
+<td>R$ 5,9 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:83%"></span></div></td>
+</tr><tr>
+<td>jun/2026</td>
+<td>6</td>
+<td>R$ 7,1 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:100%"></span></div></td>
+</tr><tr>
+<td>jul/2026</td>
+<td>1</td>
+<td>R$ 400.000</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:6%"></span></div></td>
+</tr><tr>
+<td>ago/2026</td>
+<td>14</td>
+<td>R$ 5,3 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:75%"></span></div></td>
+</tr><tr>
+<td>set/2026</td>
+<td>2</td>
+<td>R$ 1,2 mi</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:18%"></span></div></td>
+</tr><tr>
+<td>out/2026</td>
+<td>0</td>
+<td>—</td>
+<td class="col-barra"><div class="barra-mes"><span style="width:0%"></span></div></td>
+</tr><tr class="linha-total"><td>Últimos 12 meses</td><td>85</td><td>R$ 44,3 mi</td><td></td></tr>
+<tr class="linha-total"><td>Total desde o início</td><td>821</td><td>R$ 448,6 mi</td><td></td></tr></tbody>
   </table></div>
 </div>
 </div>
